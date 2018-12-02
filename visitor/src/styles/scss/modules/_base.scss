@@ -3,4 +3,19 @@ body {
   width: 100vw;
   max-width: 100%;
   position: relative;
+  font-family: "Work Sans", sans-serif;
+  color: $black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
 }

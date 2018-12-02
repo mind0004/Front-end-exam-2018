@@ -1,6 +1,148 @@
 //Lars
 #index {
-  //write everything that applies to the index page inside here
+  //HEADER
+  header {
+    width: 100vw;
+    max-width: 100%;
+    height: 100px;
+    .container {
+      max-width: 1200px;
+      height: 70px;
+      margin: 0 auto;
+      h2 {
+        float: left;
+        font-size: 40px;
+        line-height: 100px;
+        margin-left: 20px;
+      }
+      .a-button {
+        float: right;
+        margin: 35px 20px 0px 0px;
+      }
+    }
+  }
+
+  main {
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  #hero {
+    height: calc(100vh - 70px);
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    max-width: 100%;
+    .container {
+      width: 80vw;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-top: 28vh;
+      text-align: center;
+
+      h1 {
+        font-size: 70px;
+      }
+      .tagline {
+        width: 600px;
+        margin: 20px auto 0px auto;
+        font-size: 25px;
+      }
+      .read-more {
+        position: relative;
+        width: 80px;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 50px;
+        color: #757575;
+        p {
+          font-size: 12px;
+        }
+        span {
+          width: 1.5px;
+          height: 15px;
+          background: #757575;
+          display: block;
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          margin: 0 auto;
+          bottom: 5px;
+        }
+        span:nth-of-type(2) {
+          width: 10px;
+          height: 1px;
+          transform: rotate(-55deg);
+          left: 6.5px;
+          bottom: 9px;
+        }
+        span:nth-of-type(3) {
+          width: 10px;
+          height: 1px;
+          transform: rotate(55deg);
+          left: -6.5px;
+          bottom: 9px;
+        }
+      }
+    }
+    img {
+      position: absolute;
+      bottom: -10vh;
+      right: 0px;
+      height: 45vh;
+      width: auto;
+      z-index: -1;
+    }
+  }
+
+  #intro {
+    width: 100vw;
+    max-width: 1200px;
+    margin: 50px auto 0px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr; /* keeps all grid boxes same height, else remove */
+    grid-gap: 50px;
+
+    > div {
+      grid-column: span 1;
+      min-height: 500px;
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      h3 {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 29px;
+      }
+    }
+
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      height: 300px;
+    }
+
+    .waste-chart {
+      h3 {
+        font-size: 35px;
+        margin-bottom: 0px;
+      }
+      p {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 /* ==========================================================================
