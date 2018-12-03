@@ -338,6 +338,189 @@ a {
     text-align: center;
     font-size: 12px;
     margin-top: 10px; }
+  #index #intro .research-state {
+    display: flex;
+    /* establish flex container */
+    flex-direction: column;
+    /* make main axis vertical */
+    justify-content: center;
+    /* center items vertically, in this case */
+    align-items: center; }
+    #index #intro .research-state .timeline {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 1fr;
+      /* keeps all grid boxes same height, else remove */
+      grid-gap: 10px;
+      position: relative;
+      width: 300px; }
+      #index #intro .research-state .timeline > p {
+        grid-column: span 2; }
+      #index #intro .research-state .timeline > p.state {
+        grid-column: span 3; }
+      #index #intro .research-state .timeline .check {
+        height: 22px;
+        width: 22px;
+        border: 1px solid #eeeeee;
+        border-radius: 50%;
+        background: white;
+        position: relative; }
+        #index #intro .research-state .timeline .check span {
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          margin: auto;
+          height: 13px;
+          width: 2px;
+          background: white;
+          transform: rotate(32deg);
+          top: 0px;
+          left: 3px;
+          z-index: 2; }
+        #index #intro .research-state .timeline .check span:last-of-type {
+          height: 6px;
+          transform: rotate(-35deg);
+          top: 3px;
+          left: -7px; }
+        #index #intro .research-state .timeline .check > div {
+          height: 0px;
+          width: 0px;
+          border-radius: 50%;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          right: 0px;
+          left: 0px;
+          margin: auto;
+          z-index: 1;
+          background: rgba(0, 0, 0, 0);
+          transition: height 0.3s, width 0.3s, background 0.3s; }
+      #index #intro .research-state .timeline .check.active > div {
+        height: 22px;
+        width: 22px;
+        background: #33c04a; }
+    #index #intro .research-state .line {
+      position: absolute;
+      left: -70px;
+      right: 0px;
+      top: 10px;
+      width: 1px;
+      background: grey;
+      height: 0px;
+      margin: 0 auto;
+      transition: all 4s;
+      z-index: -2; }
+
+#index #donate {
+  text-align: center;
+  margin-top: 130px; }
+  #index #donate h2 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 35px; }
+  #index #donate p {
+    font-size: 25px;
+    margin-top: 20px; }
+  #index #donate a {
+    margin-top: 60px;
+    font-size: 40px;
+    border-radius: 40px;
+    padding: 12px 45px; }
+
+#index #newsletter {
+  text-align: center;
+  margin-top: 180px; }
+  #index #newsletter h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 30px; }
+  #index #newsletter .input-field {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 480px; }
+    #index #newsletter .input-field input {
+      font-size: 32px;
+      padding: 40px 20px 0px 5px; }
+    #index #newsletter .input-field label {
+      font-size: 32px; }
+    #index #newsletter .input-field input:focus ~ label {
+      color: #464646;
+      transform: translateY(-40px);
+      font-size: 20px; }
+    #index #newsletter .input-field input:not(:placeholder-shown) ~ label {
+      color: #464646;
+      transform: translateY(-40px);
+      font-size: 20px; }
+  #index #newsletter .submit-button {
+    margin-top: 40px;
+    background: white;
+    color: #454545;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    padding: 8px 25px;
+    font-size: 30px;
+    border-radius: 25px;
+    border: 1px solid #707070; }
+
+#index #featured {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px; }
+  #index #featured h3 {
+    font-size: 40px;
+    color: #b2b2b2; }
+  #index #featured img {
+    padding-top: 20px;
+    width: 80vw;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: block; }
+
+#index footer {
+  margin-top: 70px;
+  width: 100vw;
+  max-width: 100%;
+  height: 250px;
+  background: #e5e5e5;
+  position: relative; }
+  #index footer .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    /* keeps all grid boxes same height, else remove */
+    grid-gap: 50px;
+    height: 250px; }
+    #index footer .container > div {
+      color: grey;
+      display: flex;
+      /* establish flex container */
+      flex-direction: column;
+      /* make main axis vertical */
+      justify-content: center;
+      /* center items vertically, in this case */
+      align-items: center; }
+    #index footer .container p {
+      font-size: 25px;
+      line-height: 30px; }
+    #index footer .container a {
+      font-size: 25px;
+      color: #464646; }
+  #index footer .copyright {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
+    color: #969696; }
+  #index footer .login {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 25px;
+    color: #464646; }
 
 /* ==========================================================================
    SECOND APPROACH - DESKTOP FIRST
@@ -346,7 +529,7 @@ a {
    SECOND APPROACH - DESKTOP FIRST
    ========================================================================== */
 strong {
-  font-weight: bold; }
+  font-weight: 500; }
 
 .clearfix::after {
   content: "";
