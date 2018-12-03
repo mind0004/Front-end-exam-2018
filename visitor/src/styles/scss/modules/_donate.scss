@@ -1,6 +1,159 @@
 //Mini
 
-#donate {
+// STEP 1
+#step-1 {
+  .donate-grid {
+    display: grid;
+    grid-gap: 50px 100px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+
+    .card {
+      height: 60vh;
+      width: 30vw;
+
+      display: block;
+      justify-self: center;
+
+      #recentdonors {
+        h2 {
+          border-bottom: 1px solid black;
+        }
+      }
+      .recentdonors-grid {
+        margin-bottom: 3vw;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      #topdonors {
+        h2 {
+          border-bottom: 1px solid black;
+        }
+      }
+
+      .topdonors-grid {
+        margin-bottom: 3vw;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card-content2 {
+        text-align: end;
+      }
+
+      #contentdiv {
+        height: 90%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        #donatemoney {
+          text-align: center;
+          .slidecontainer {
+            p {
+              font-size: 32px;
+              margin-bottom: 20px;
+            }
+
+            input {
+              width: 100%;
+              margin: 0;
+            }
+          }
+
+          #subcheckbox {
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+          }
+
+          .a-button {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+
+  .slidecontainer {
+    width: 100%;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: gray;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+// STEP 2
+#step-2 {
+  #payment-grid {
+    display: grid;
+    grid-gap: 50px 100px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+
+    .card {
+      height: 60vh;
+      width: 30vw;
+
+      display: block;
+      justify-self: center;
+    }
+
+    #subcheckbox {
+      color: #b6b6b6;
+    }
+
+    #monthyear-grid {
+      display: grid;
+      grid-gap: 10px 100px;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px;
+    }
+
+    #paypalbox {
+      #subcheckbox {
+        margin-top: 5vh;
+      }
+    }
+  }
 }
 
 /* ==========================================================================
