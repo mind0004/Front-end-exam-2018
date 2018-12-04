@@ -97,144 +97,159 @@
   }
 
   #intro {
-    width: 90vw;
-    max-width: 1200px;
-    margin: 50px auto 0px auto;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr; /* keeps all grid boxes same height, else remove */
-    grid-gap: 50px;
+    width: 100vw;
+    max-width: 100%;
+    .container {
+      width: 90vw;
+      max-width: 1200px;
+      margin: 50px auto 0px auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr; /* keeps all grid boxes same height, else remove */
+      grid-gap: 50px;
 
-    > div {
-      min-height: 500px;
-    }
-    .text {
-      display: flex;
-      align-items: center;
-      h3 {
-        font-size: 35px;
-        margin-bottom: 20px;
+      > div {
+        min-height: 500px;
       }
-      p {
-        font-size: 20px;
-        line-height: 29px;
-      }
-    }
-
-    .image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      height: 300px;
-    }
-
-    .waste-chart {
-      display: flex; /* establish flex container */
-      flex-direction: column; /* make main axis vertical */
-      justify-content: center; /* center items vertically, in this case */
-      align-items: center;
-      h3 {
-        font-size: 35px;
-        margin-bottom: 0px;
-      }
-      p {
-        text-align: center;
-        font-size: 12px;
-        margin-top: 10px;
-      }
-    }
-
-    .research-state {
-      display: flex; /* establish flex container */
-      flex-direction: column; /* make main axis vertical */
-      justify-content: center; /* center items vertically, in this case */
-      align-items: center;
-
-      .timeline {
-        margin-top: 18px;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-auto-rows: 1fr; /* keeps all grid boxes same height, else remove */
-        grid-gap: 10px;
-        position: relative;
-        width: 300px;
-
-        > p {
-          grid-column: span 2;
+      .text {
+        display: flex;
+        align-items: center;
+        h3 {
+          font-size: 35px;
+          margin-bottom: 20px;
         }
-
-        > p.state {
-          grid-column: span 3;
+        p {
+          font-size: 20px;
+          line-height: 29px;
         }
+      }
 
-        .check {
-          height: 22px;
-          width: 22px;
-          border: 1px solid rgb(238, 238, 238);
-          border-radius: 50%;
-          background: white;
+      .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        height: 300px;
+      }
+
+      .waste-chart {
+        display: flex; /* establish flex container */
+        flex-direction: column; /* make main axis vertical */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center;
+        h3 {
+          font-size: 35px;
+          margin-bottom: 0px;
+        }
+        p {
+          text-align: center;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+
+      .research-state {
+        display: flex; /* establish flex container */
+        flex-direction: column; /* make main axis vertical */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center;
+
+        .timeline {
+          margin-top: 18px;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-auto-rows: 1fr; /* keeps all grid boxes same height, else remove */
+          grid-gap: 10px;
           position: relative;
+          width: 300px;
 
-          span {
-            display: block;
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            margin: auto;
-            height: 13px;
-            width: 2px;
-            background: white;
-            transform: rotate(32deg);
-            top: 0px;
-            left: 3px;
-            z-index: 2;
-          }
-          span:last-of-type {
-            height: 6px;
-            transform: rotate(-35deg);
-            top: 3px;
-            left: -7px;
+          > p {
+            grid-column: span 2;
           }
 
-          > div {
-            height: 0px;
-            width: 0px;
-            border-radius: 50%;
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            right: 0px;
-            left: 0px;
-            margin: auto;
-            z-index: 1;
-            background: rgba(0, 0, 0, 0);
-            transition: height 0.3s, width 0.3s, background 0.3s;
+          > p.state {
+            grid-column: span 3;
           }
-        }
-        .check.active {
-          > div {
+
+          .check {
             height: 22px;
             width: 22px;
-            background: #33c04a;
+            border: 1px solid rgb(238, 238, 238);
+            border-radius: 50%;
+            background: white;
+            position: relative;
+
+            span {
+              display: block;
+              position: absolute;
+              bottom: 0px;
+              right: 0px;
+              margin: auto;
+              height: 13px;
+              width: 2px;
+              background: white;
+              transform: rotate(32deg);
+              top: 0px;
+              left: 3px;
+              z-index: 2;
+            }
+            span:last-of-type {
+              height: 6px;
+              transform: rotate(-35deg);
+              top: 3px;
+              left: -7px;
+            }
+
+            > div {
+              height: 0px;
+              width: 0px;
+              border-radius: 50%;
+              position: absolute;
+              top: 0px;
+              bottom: 0px;
+              right: 0px;
+              left: 0px;
+              margin: auto;
+              z-index: 1;
+              background: rgba(0, 0, 0, 0);
+              transition: height 0.3s, width 0.3s, background 0.3s;
+            }
+          }
+          .check.active {
+            > div {
+              height: 22px;
+              width: 22px;
+              background: #33c04a;
+            }
           }
         }
-      }
 
-      .line {
-        position: absolute;
-        left: -70px;
-        right: 0px;
-        top: 10px;
-        width: 1px;
-        background: grey;
-        height: 0px;
-        margin: 0 auto;
-        transition: all 4s;
-        z-index: -2;
+        .line {
+          position: absolute;
+          left: -70px;
+          right: 0px;
+          top: 10px;
+          width: 1px;
+          background: grey;
+          height: 0px;
+          margin: 0 auto;
+          transition: all 4s;
+          z-index: -2;
+        }
       }
+    }
+    .background {
+      width: 100vw;
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: -100;
     }
   }
 
@@ -294,10 +309,6 @@
       margin-top: 40px;
       background: white;
       color: #454545;
-      display: inline-block;
-      font-family: "Raleway", sans-serif;
-      padding: 8px 25px;
-      font-size: 20px;
       border-radius: 25px;
       border: 1px solid #707070;
     }
@@ -576,11 +587,11 @@
         .address,
         .contact {
           grid-column: span 2;
-          grid-row: 1 / 2;
+          grid-row: 2 / 3;
         }
         .research {
           grid-column: span 4;
-          grid-row: 2 / 3;
+          grid-row: 1 / 2;
         }
       }
       .login {

@@ -19,7 +19,7 @@
   padding: 10px 20px;
   box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  h2 {
+  > h2 {
     margin-bottom: 15px;
   }
   .card-content {
@@ -29,8 +29,9 @@
 //Input fields with float
 .input-field {
   display: table;
-  padding: 0px 20px 0px 0px;
+  padding: 0px 0px 0px 0px;
   position: relative;
+  background: white;
   label {
     position: absolute;
     display: block;
@@ -40,15 +41,19 @@
     bottom: 10px;
     left: 0px;
     transition: all 0.3s;
+    z-index: 10;
   }
   input {
     float: left;
     width: 100%;
     font-size: 18px;
-    padding: 20px 20px 0px 5px;
+    padding: 20px 0px 0px 5px;
     border: none;
     outline: none;
     margin-bottom: 5px;
+    position: relative;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0);
   }
   .underline {
     position: absolute;
@@ -73,4 +78,74 @@
     height: 1.5px;
     background: #6a6a6a;
   }
+}
+
+//Text-area fields
+.text-area {
+  display: table;
+  padding: 0px 0px 0px 0px;
+  position: relative;
+  background: white;
+
+  label {
+    position: absolute;
+    display: block;
+    color: #b6b6b6;
+    font-size: 18px;
+    padding-left: 5px;
+    top: 24px;
+    left: 0px;
+    transition: all 0.3s;
+    z-index: 10;
+  }
+
+  textarea {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px 0px 0px 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0);
+    font-family: "Work Sans", sans-serif;
+  }
+  .underline {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    background: #b6b6b6;
+    transition: all 0.3s;
+  }
+
+  textarea:focus ~ label {
+    color: $black;
+    transform: translateY(-17px);
+    font-size: 60%;
+  }
+  textarea:not(:placeholder-shown) ~ label {
+    color: $black;
+    transform: translateY(-17px);
+    font-size: 60%;
+  }
+
+  textarea:focus ~ .underline {
+    height: 1.5px;
+    background: #6a6a6a;
+  }
+}
+
+.submit-button {
+  margin-top: 10px;
+  background: $blue;
+  color: white;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  padding: 8px 25px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
 }
