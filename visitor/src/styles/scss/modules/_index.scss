@@ -44,7 +44,8 @@
         font-size: 70px;
       }
       .tagline {
-        width: 600px;
+        width: 80vw;
+        max-width: 900px;
         margin: 20px auto 0px auto;
         font-size: 25px;
       }
@@ -96,7 +97,7 @@
   }
 
   #intro {
-    width: 100vw;
+    width: 90vw;
     max-width: 1200px;
     margin: 50px auto 0px auto;
     position: relative;
@@ -106,7 +107,6 @@
     grid-gap: 50px;
 
     > div {
-      grid-column: span 1;
       min-height: 500px;
     }
     .text {
@@ -132,6 +132,10 @@
     }
 
     .waste-chart {
+      display: flex; /* establish flex container */
+      flex-direction: column; /* make main axis vertical */
+      justify-content: center; /* center items vertically, in this case */
+      align-items: center;
       h3 {
         font-size: 35px;
         margin-bottom: 0px;
@@ -250,7 +254,7 @@
 
     a {
       margin-top: 60px;
-      font-size: 40px;
+      font-size: 30px;
       border-radius: 40px;
       padding: 12px 45px;
     }
@@ -261,18 +265,18 @@
     margin-top: 180px;
     h3 {
       font-family: "Work Sans", sans-serif;
-      font-size: 30px;
+      font-size: 25px;
     }
     .input-field {
       margin: 0 auto;
       margin-top: 10px;
       width: 480px;
       input {
-        font-size: 32px;
+        font-size: 25px;
         padding: 40px 20px 0px 5px;
       }
       label {
-        font-size: 32px;
+        font-size: 25px;
       }
       input:focus ~ label {
         color: $black;
@@ -293,32 +297,32 @@
       display: inline-block;
       font-family: "Raleway", sans-serif;
       padding: 8px 25px;
-      font-size: 30px;
+      font-size: 20px;
       border-radius: 25px;
       border: 1px solid #707070;
     }
   }
 
   #featured {
-    width: 100vw;
+    width: 90vw;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 120px;
     h3 {
-      font-size: 40px;
+      font-size: 35px;
       color: #b2b2b2;
     }
     img {
       padding-top: 20px;
-      width: 80vw;
-      max-width: 1100px;
+      width: 75vw;
+      max-width: 1000px;
       margin: 0 auto;
       display: block;
     }
   }
 
   footer {
-    margin-top: 70px;
+    margin-top: 100px;
     width: 100vw;
     max-width: 100%;
     height: 250px;
@@ -341,11 +345,11 @@
         align-items: center;
       }
       p {
-        font-size: 25px;
+        font-size: 18px;
         line-height: 30px;
       }
       a {
-        font-size: 25px;
+        font-size: 18px;
         color: $black;
       }
     }
@@ -365,6 +369,9 @@
       font-size: 25px;
       color: $black;
     }
+    .research {
+      text-align: center;
+    }
   }
 }
 
@@ -378,7 +385,105 @@
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
   #index {
-    //write everything that applies to the index page inside here
+    #hero .container {
+      padding-top: 22vh;
+      h1 {
+        font-size: 50px;
+      }
+    }
+
+    #intro {
+      > div {
+        min-height: 450px;
+      }
+
+      img {
+        height: 240px;
+      }
+      .text h3 {
+        font-size: 30px;
+      }
+      .text p {
+        font-size: 16px;
+        line-height: 27px;
+      }
+      .waste-chart h3 {
+        font-size: 30px;
+        margin-bottom: 0px;
+      }
+    }
+
+    #donate {
+      margin-top: 110px;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      a {
+        margin-top: 60px;
+        font-size: 23px;
+        border-radius: 40px;
+        padding: 12px 35px;
+      }
+    }
+
+    #newsletter {
+      margin-top: 155px;
+      h3 {
+        font-size: 20px;
+      }
+      .input-field {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 360px;
+        input {
+          font-size: 20px;
+          padding: 40px 20px 0px 5px;
+        }
+        label {
+          font-size: 20px;
+        }
+        input:focus ~ label {
+          transform: translateY(-30px);
+          font-size: 12px;
+        }
+        input:not(:placeholder-shown) ~ label {
+          transform: translateY(-30px);
+          font-size: 12px;
+        }
+      }
+      .submit-button {
+        padding: 5px 20px;
+        font-size: 16px;
+      }
+    }
+
+    #featured h3 {
+      font-size: 25px;
+      color: #b2b2b2;
+    }
+
+    footer {
+      height: 200px;
+      .container {
+        grid-gap: 30px;
+        height: 200px;
+        p {
+          font-size: 16px;
+          line-height: 23px;
+        }
+        a {
+          font-size: 16px;
+          color: #464646;
+        }
+      }
+      .copyright {
+        font-size: 12px !important;
+      }
+    }
   }
 }
 
@@ -392,7 +497,96 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
   #index {
-    //write everything that applies to the index page inside here
+    #hero {
+      .container {
+        h1 {
+          font-size: 30px;
+        }
+        .tagline {
+          width: 80vw;
+          max-width: 900px;
+          margin: 20px auto 0px auto;
+          font-size: 20px;
+        }
+      }
+      img {
+        right: -100px;
+      }
+    }
+
+    #intro {
+      width: 90vw;
+      max-width: 90vw;
+      margin: 50px auto 0px auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: minmax(
+        min-content,
+        max-content
+      ); /* fit to each div size */
+      grid-gap: 10px;
+
+      > div {
+        min-height: 280px;
+        max-width: 90vw;
+      }
+      .image {
+        margin-bottom: 65px;
+      }
+      .text {
+        display: block;
+      }
+      .bottle {
+        grid-row: 4 / 5;
+      }
+      .microscope {
+        grid-row: 8 / 9;
+        margin-bottom: 0px;
+      }
+      img {
+        height: 170px;
+      }
+    }
+    #donate {
+      width: 90vw;
+      margin: 0 auto;
+      margin-top: 110px;
+    }
+
+    #newsletter .input-field {
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 85vw;
+    }
+
+    #index #featured img {
+      width: 90vw;
+    }
+    footer {
+      height: 230px;
+      .container {
+        grid-gap: 30px;
+        height: 230px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(min-content, max-content);
+        > div {
+          min-height: 75px;
+        }
+        .address,
+        .contact {
+          grid-column: span 2;
+          grid-row: 1 / 2;
+        }
+        .research {
+          grid-column: span 4;
+          grid-row: 2 / 3;
+        }
+      }
+      .login {
+        bottom: 40px;
+      }
+    }
   }
 }
 

@@ -261,7 +261,8 @@ a {
     #index #hero .container h1 {
       font-size: 70px; }
     #index #hero .container .tagline {
-      width: 600px;
+      width: 80vw;
+      max-width: 900px;
       margin: 20px auto 0px auto;
       font-size: 25px; }
     #index #hero .container .read-more {
@@ -304,7 +305,7 @@ a {
     z-index: -1; }
 
 #index #intro {
-  width: 100vw;
+  width: 90vw;
   max-width: 1200px;
   margin: 50px auto 0px auto;
   position: relative;
@@ -314,7 +315,6 @@ a {
   /* keeps all grid boxes same height, else remove */
   grid-gap: 50px; }
   #index #intro > div {
-    grid-column: span 1;
     min-height: 500px; }
   #index #intro .text {
     display: flex;
@@ -331,13 +331,21 @@ a {
     justify-content: center; }
   #index #intro img {
     height: 300px; }
-  #index #intro .waste-chart h3 {
-    font-size: 35px;
-    margin-bottom: 0px; }
-  #index #intro .waste-chart p {
-    text-align: center;
-    font-size: 12px;
-    margin-top: 10px; }
+  #index #intro .waste-chart {
+    display: flex;
+    /* establish flex container */
+    flex-direction: column;
+    /* make main axis vertical */
+    justify-content: center;
+    /* center items vertically, in this case */
+    align-items: center; }
+    #index #intro .waste-chart h3 {
+      font-size: 35px;
+      margin-bottom: 0px; }
+    #index #intro .waste-chart p {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 10px; }
   #index #intro .research-state {
     display: flex;
     /* establish flex container */
@@ -424,7 +432,7 @@ a {
     margin-top: 20px; }
   #index #donate a {
     margin-top: 60px;
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 40px;
     padding: 12px 45px; }
 
@@ -433,16 +441,16 @@ a {
   margin-top: 180px; }
   #index #newsletter h3 {
     font-family: "Work Sans", sans-serif;
-    font-size: 30px; }
+    font-size: 25px; }
   #index #newsletter .input-field {
     margin: 0 auto;
     margin-top: 10px;
     width: 480px; }
     #index #newsletter .input-field input {
-      font-size: 32px;
+      font-size: 25px;
       padding: 40px 20px 0px 5px; }
     #index #newsletter .input-field label {
-      font-size: 32px; }
+      font-size: 25px; }
     #index #newsletter .input-field input:focus ~ label {
       color: #464646;
       transform: translateY(-40px);
@@ -458,27 +466,27 @@ a {
     display: inline-block;
     font-family: "Raleway", sans-serif;
     padding: 8px 25px;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 25px;
     border: 1px solid #707070; }
 
 #index #featured {
-  width: 100vw;
+  width: 90vw;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 100px; }
+  margin-top: 120px; }
   #index #featured h3 {
-    font-size: 40px;
+    font-size: 35px;
     color: #b2b2b2; }
   #index #featured img {
     padding-top: 20px;
-    width: 80vw;
-    max-width: 1100px;
+    width: 75vw;
+    max-width: 1000px;
     margin: 0 auto;
     display: block; }
 
 #index footer {
-  margin-top: 70px;
+  margin-top: 100px;
   width: 100vw;
   max-width: 100%;
   height: 250px;
@@ -502,10 +510,10 @@ a {
       /* center items vertically, in this case */
       align-items: center; }
     #index footer .container p {
-      font-size: 25px;
+      font-size: 18px;
       line-height: 30px; }
     #index footer .container a {
-      font-size: 25px;
+      font-size: 18px;
       color: #464646; }
   #index footer .copyright {
     position: absolute;
@@ -521,10 +529,143 @@ a {
     bottom: 20px;
     font-size: 25px;
     color: #464646; }
+  #index footer .research {
+    text-align: center; }
 
 /* ==========================================================================
    SECOND APPROACH - DESKTOP FIRST
    ========================================================================== */
+@media (max-width: 1199px) {
+  #index #hero .container {
+    padding-top: 22vh; }
+    #index #hero .container h1 {
+      font-size: 50px; }
+  #index #intro > div {
+    min-height: 450px; }
+  #index #intro img {
+    height: 240px; }
+  #index #intro .text h3 {
+    font-size: 30px; }
+  #index #intro .text p {
+    font-size: 16px;
+    line-height: 27px; }
+  #index #intro .waste-chart h3 {
+    font-size: 30px;
+    margin-bottom: 0px; }
+  #index #donate {
+    margin-top: 110px; }
+    #index #donate h2 {
+      font-size: 30px; }
+    #index #donate p {
+      font-size: 20px;
+      margin-top: 20px; }
+    #index #donate a {
+      margin-top: 60px;
+      font-size: 23px;
+      border-radius: 40px;
+      padding: 12px 35px; }
+  #index #newsletter {
+    margin-top: 155px; }
+    #index #newsletter h3 {
+      font-size: 20px; }
+    #index #newsletter .input-field {
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 360px; }
+      #index #newsletter .input-field input {
+        font-size: 20px;
+        padding: 40px 20px 0px 5px; }
+      #index #newsletter .input-field label {
+        font-size: 20px; }
+      #index #newsletter .input-field input:focus ~ label {
+        transform: translateY(-30px);
+        font-size: 12px; }
+      #index #newsletter .input-field input:not(:placeholder-shown) ~ label {
+        transform: translateY(-30px);
+        font-size: 12px; }
+    #index #newsletter .submit-button {
+      padding: 5px 20px;
+      font-size: 16px; }
+  #index #featured h3 {
+    font-size: 25px;
+    color: #b2b2b2; }
+  #index footer {
+    height: 200px; }
+    #index footer .container {
+      grid-gap: 30px;
+      height: 200px; }
+      #index footer .container p {
+        font-size: 16px;
+        line-height: 23px; }
+      #index footer .container a {
+        font-size: 16px;
+        color: #464646; }
+    #index footer .copyright {
+      font-size: 12px !important; } }
+
+@media (max-width: 767px) {
+  #index #hero .container h1 {
+    font-size: 30px; }
+  #index #hero .container .tagline {
+    width: 80vw;
+    max-width: 900px;
+    margin: 20px auto 0px auto;
+    font-size: 20px; }
+  #index #hero img {
+    right: -100px; }
+  #index #intro {
+    width: 90vw;
+    max-width: 90vw;
+    margin: 50px auto 0px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    /* fit to each div size */
+    grid-gap: 10px; }
+    #index #intro > div {
+      min-height: 280px;
+      max-width: 90vw; }
+    #index #intro .image {
+      margin-bottom: 65px; }
+    #index #intro .text {
+      display: block; }
+    #index #intro .bottle {
+      grid-row: 4 / 5; }
+    #index #intro .microscope {
+      grid-row: 8 / 9;
+      margin-bottom: 0px; }
+    #index #intro img {
+      height: 170px; }
+  #index #donate {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 110px; }
+  #index #newsletter .input-field {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 85vw; }
+  #index #index #featured img {
+    width: 90vw; }
+  #index footer {
+    height: 230px; }
+    #index footer .container {
+      grid-gap: 30px;
+      height: 230px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(min-content, max-content); }
+      #index footer .container > div {
+        min-height: 75px; }
+      #index footer .container .address,
+      #index footer .container .contact {
+        grid-column: span 2;
+        grid-row: 1 / 2; }
+      #index footer .container .research {
+        grid-column: span 4;
+        grid-row: 2 / 3; }
+    #index footer .login {
+      bottom: 40px; } }
+
 /* ==========================================================================
    SECOND APPROACH - DESKTOP FIRST
    ========================================================================== */

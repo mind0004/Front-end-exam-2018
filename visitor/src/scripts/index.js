@@ -131,7 +131,7 @@ function drawInitalChart() {
       legend: {
         labels: {
           usePointStyle: true,
-          padding: 50
+          padding: 10
         }
       }
     }
