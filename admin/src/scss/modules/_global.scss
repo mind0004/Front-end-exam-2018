@@ -66,12 +66,12 @@
   input:focus ~ label {
     color: $black;
     transform: translateY(-25px);
-    font-size: 60%;
+    font-size: 80%;
   }
   input:not(:placeholder-shown) ~ label {
     color: $black;
     transform: translateY(-25px);
-    font-size: 60%;
+    font-size: 80%;
   }
 
   input:focus ~ .underline {
