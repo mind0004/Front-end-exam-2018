@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Primary SCSS file - imports and bundles all other together as one
+   ========================================================================== */
+
+//Import the main files
+@import "modules/css-reset";
+@import "modules/colours";
+@import "modules/base";
+@import "modules/global";
+
+//Import page specific files
+@import "modules/login";
+@import "modules/dashboard.scss";
+
+//Import specials
+@import "modules/special";

@@ -1,2 +1,3 @@
-/visitor/node_modules
-/admin/node_modules
+visitor/node_modules
+admin/node_modules
+**/node_modules
