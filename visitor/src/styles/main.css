@@ -349,9 +349,11 @@ a {
   padding: 10px; }
   #step-1 .donate-grid .card {
     height: 60vh;
-    width: 30vw;
+    width: 20vw;
     display: block;
     justify-self: center; }
+    #step-1 .donate-grid .card p {
+      font-size: 1.2vw; }
     #step-1 .donate-grid .card #recentdonors h2 {
       border-bottom: 1px solid black; }
     #step-1 .donate-grid .card .recentdonors-grid {
@@ -375,7 +377,7 @@ a {
       #step-1 .donate-grid .card #contentdiv #donatemoney {
         text-align: center; }
         #step-1 .donate-grid .card #contentdiv #donatemoney .slidecontainer p {
-          font-size: 32px;
+          font-size: 5vw;
           margin-bottom: 20px; }
         #step-1 .donate-grid .card #contentdiv #donatemoney .slidecontainer input {
           width: 100%;
@@ -427,9 +429,11 @@ a {
   padding: 10px; }
   #step-2 #payment-grid .card {
     height: 60vh;
-    width: 30vw;
+    width: 20vw;
     display: block;
     justify-self: center; }
+    #step-2 #payment-grid .card p {
+      font-size: 1.2vw; }
   #step-2 #payment-grid #subcheckbox {
     color: #b6b6b6; }
   #step-2 #payment-grid #monthyear-grid {
@@ -439,6 +443,38 @@ a {
     padding: 10px; }
   #step-2 #payment-grid #paypalbox #subcheckbox {
     margin-top: 5vh; }
+
+#step-2 #end {
+  margin: 0 auto;
+  text-align: center; }
+
+#step-2 .a-button {
+  margin-bottom: 1vh; }
+
+#step-3 #backtopoly {
+  text-align: center;
+  margin-top: 2vh; }
+
+#step-3 .card {
+  margin: 0 auto;
+  text-align: center;
+  width: 70vw; }
+  #step-3 .card p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5vw;
+    max-width: 40vw; }
+  #step-3 .card #step-3-header {
+    font-size: 6vw; }
+  #step-3 .card #thankyoutext {
+    margin-bottom: 2vh; }
+  #step-3 .card #uptodate {
+    margin-top: 2vh;
+    margin-bottom: 1.5vh; }
+  #step-3 .card .input-field {
+    margin: 0 auto; }
+  #step-3 .card .a-button {
+    margin-top: 1.8vh; }
 
 /* ==========================================================================
    SECOND APPROACH - DESKTOP FIRST

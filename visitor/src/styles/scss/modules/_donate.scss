@@ -10,10 +10,14 @@
 
     .card {
       height: 60vh;
-      width: 30vw;
+      width: 20vw;
 
       display: block;
       justify-self: center;
+
+      p {
+        font-size: 1.2vw;
+      }
 
       #recentdonors {
         h2 {
@@ -56,7 +60,7 @@
           text-align: center;
           .slidecontainer {
             p {
-              font-size: 32px;
+              font-size: 5vw;
               margin-bottom: 20px;
             }
 
@@ -130,8 +134,12 @@
     padding: 10px;
 
     .card {
+      p {
+        font-size: 1.2vw;
+      }
+
       height: 60vh;
-      width: 30vw;
+      width: 20vw;
 
       display: block;
       justify-self: center;
@@ -152,6 +160,57 @@
       #subcheckbox {
         margin-top: 5vh;
       }
+    }
+  }
+
+  #end {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .a-button {
+    margin-bottom: 1vh;
+  }
+}
+
+// STEP 3
+#step-3 {
+  #backtopoly {
+    text-align: center;
+    margin-top: 2vh;
+  }
+  .card {
+    margin: 0 auto;
+    text-align: center;
+
+    width: 70vw;
+
+    p {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.5vw;
+      max-width: 40vw;
+    }
+
+    #step-3-header {
+      font-size: 6vw;
+    }
+
+    #thankyoutext {
+      margin-bottom: 2vh;
+    }
+
+    #uptodate {
+      margin-top: 2vh;
+      margin-bottom: 1.5vh;
+    }
+
+    .input-field {
+      margin: 0 auto;
+    }
+
+    .a-button {
+      margin-top: 1.8vh;
     }
   }
 }
