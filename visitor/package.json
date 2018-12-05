@@ -4,7 +4,7 @@
   "description": "Use this default setup structure for web development",
   "scripts": {
     "dev-sass": "node-sass src/styles/scss/primary.scss src/styles/main.css -w",
-    "dev-server": "live-server --open=src --browser=Chrome",
+    "dev-server": "live-server --open=src --browser=Chrome --wait=300",
     "dev": "npm run dev-sass | npm run dev-server",
     "=============================": "====================================",
     "build-sass": "node-sass src/styles/scss/primary.scss src/styles/main.css",

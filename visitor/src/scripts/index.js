@@ -3,26 +3,44 @@
 /* ==========================================================================
    Global variables
    ========================================================================== */
-const body = document.querySelector("body");
 const chartCanvas = document.querySelector("#myChart");
-let wasteChart, wasteChartInterval;
+const timelineCheckBoxes = document.querySelectorAll(
+  ".research-state .timeline .check"
+);
+const timelineLine = document.querySelector(".research-state .timeline .line");
+let wasteChart, scrollPositionInterval;
 /* ==========================================================================
    Initialize
    ========================================================================== */
 document.addEventListener("DOMContentLoaded", init);
 function init() {
   //do stuff after page has loaded
-  const doc = document.documentElement;
 
+  //Draw chart WITHOUT lines
   drawInitalChart();
-
-  wasteChartInterval = setInterval(() => {
+  const doc = document.documentElement;
+  console.log(chartCanvas.getBoundingClientRect());
+  //Check if chart is visible on the screen, if yes, draw lines
+  scrollPositionInterval = setInterval(() => {
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop; //current scroll pos
     if (
-      (window.pageYOffset || document.documentElement.scrollTop) >
-      chartCanvas.getBoundingClientRect().top
+      scrollPos >
+      chartCanvas.getBoundingClientRect().top +
+        chartCanvas.getBoundingClientRect().height
     ) {
-      clearInterval(wasteChartInterval);
-      updateChart();
+      // chart is visible
+      updateChart(); //draw lines
+    }
+
+    if (
+      scrollPos >
+      timelineCheckBoxes[timelineCheckBoxes.length - 1].getBoundingClientRect()
+        .top +
+        550
+    ) {
+      //timeline is visible
+      animateTimeline();
+      clearInterval(scrollPositionInterval); //stop interval
     }
   }, 1000);
 }
@@ -34,7 +52,15 @@ function init() {
 //Draw chart
 function drawInitalChart() {
   console.log("drawcanvas");
+  Chart.defaults.global.animation.duration = 3000; //Chart draw speed
   wasteChart = new Chart(chartCanvas.getContext("2d"), {
+    defaults: {
+      global: {
+        animation: {
+          duration: 7000
+        }
+      }
+    },
     type: "line",
     data: {
       labels: [
@@ -105,7 +131,7 @@ function drawInitalChart() {
       legend: {
         labels: {
           usePointStyle: true,
-          padding: 50
+          padding: 10
         }
       }
     }
@@ -114,6 +140,7 @@ function drawInitalChart() {
 
 function updateChart() {
   console.log("update canvas");
+
   wasteChart.data.datasets[0].borderColor = "#3e95cd";
   wasteChart.data.datasets[0].data = [
     0,
@@ -143,4 +170,27 @@ function updateChart() {
     26000
   ]),
     wasteChart.update();
+}
+
+//Animate timeline line and checkboxes
+function animateTimeline() {
+  console.log("Animate timeline");
+  let i = 0;
+  const amountOfBoxesToFill = 3; //Amount of checkboxes to fill
+  drawBox();
+  const checkBoxInterval = setInterval(drawBox, 800);
+
+  function drawBox() {
+    if (i < amountOfBoxesToFill) {
+      //Fill next checkbox
+      timelineCheckBoxes[i].classList.add("active");
+    } else {
+      //Stop checkbox filling
+      clearInterval(checkBoxInterval); //stop interval
+    }
+    ++i;
+  }
+
+  timelineLine.style.transition = `all ${timelineCheckBoxes.length}s`;
+  timelineLine.style.height = "100%";
 }
