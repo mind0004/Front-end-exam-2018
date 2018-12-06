@@ -1,2 +1,34 @@
-#donator-list {
+/* ==========================================================================
+   SECOND APPROACH - DESKTOP FIRST
+   ========================================================================== */
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  #donations {
+    .donator-list {
+      .list {
+        table {
+          .email,
+          .type {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
 }

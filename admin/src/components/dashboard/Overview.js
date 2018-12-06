@@ -10,7 +10,7 @@ class Overview extends Component {
     console.log(this.props.overview);
     return (
       <div id="overview">
-        <h2>Overview</h2>
+        <h2 className="dashboard-title">Overview</h2>
         <Summary />
         <DonationsByType />
         <TopDonors />

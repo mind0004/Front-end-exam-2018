@@ -151,11 +151,49 @@
 }
 
 .list {
+  width: calc(100% - 90px);
+  margin-top: 20px;
+  margin-left: 30px;
   header {
     height: 40px;
     width: 100%;
     .search {
       float: left;
+      .input-field {
+        background: none;
+        width: 300px;
+        label {
+          left: 20px;
+        }
+        .magnifier {
+          height: 12px;
+          position: absolute;
+          display: block;
+          padding-left: 5px;
+          bottom: 12px;
+          left: 0px;
+          transition: all 0.3s;
+          z-index: 10;
+          path {
+            fill: #afafaf;
+          }
+        }
+        input:focus ~ .magnifier {
+          transform: translateY(-25px);
+          height: 10px;
+        }
+        input:not(:placeholder-shown) ~ .magnifier {
+          transform: translateY(-25px);
+          height: 10px;
+        }
+
+        input:focus ~ .magnifier > path {
+          fill: $black;
+        }
+        input:not(:placeholder-shown) ~ .magnifier > path {
+          fill: $black;
+        }
+      }
     }
     .filter {
       float: right;
@@ -170,7 +208,8 @@
   }
   table {
     border-collapse: collapse;
-    width: 70vw;
+    width: 100%;
+    margin-top: 20px;
   }
   th {
     text-align: center;
@@ -181,6 +220,7 @@
     &.active {
       background: lightblue;
       color: #5a5a5a;
+      font-weight: 500;
     }
   }
   td {
@@ -188,5 +228,162 @@
     padding: 25px 8px 20px 8px;
     min-width: 20%;
     border-bottom: 1px solid #dedede;
+  }
+}
+
+/* ==========================================================================
+   SECOND APPROACH - DESKTOP FIRST
+   ========================================================================== */
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+  .list {
+    width: calc(100% - 90px);
+    margin-top: 20px;
+    margin-left: 20px;
+    header {
+      height: 30px;
+      width: 100%;
+      .search {
+        .input-field {
+          width: 250px;
+          input {
+            font-size: 14px;
+            padding: 10px 0px 0px 5px;
+            margin-bottom: 5px;
+          }
+          label {
+            left: 15px;
+            font-size: 14px;
+          }
+          .magnifier {
+            height: 10px;
+            padding-left: 5px;
+            bottom: 12px;
+            left: 0px;
+          }
+
+          input:focus ~ .magnifier {
+            transform: translateY(-15px);
+            height: 8px;
+          }
+          input:not(:placeholder-shown) ~ .magnifier {
+            transform: translateY(-15px);
+            height: 8px;
+          }
+
+          input:focus ~ label {
+            transform: translateY(-17px);
+            font-size: 10px;
+          }
+          input:not(:placeholder-shown) ~ label {
+            transform: translateY(-17px);
+            font-size: 10px;
+          }
+        }
+      }
+      .filter {
+        float: right;
+        p {
+          display: inline-block;
+          padding-right: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+    table {
+      margin-top: 20px;
+    }
+    th {
+      padding: 10px 8px;
+      font-size: 14px;
+    }
+    td {
+      font-size: 14px;
+      padding: 25px 8px 20px 8px;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .list {
+    width: calc(100% - 50px);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 8px;
+    header {
+      height: 30px;
+      width: 100%;
+      .search {
+        .input-field {
+          width: 160px;
+          input {
+            font-size: 14px;
+            padding: 10px 0px 0px 5px;
+            margin-bottom: 5px;
+          }
+          label {
+            left: 15px;
+            font-size: 14px;
+          }
+          .magnifier {
+            height: 10px;
+            padding-left: 5px;
+            bottom: 12px;
+            left: 0px;
+          }
+
+          input:focus ~ .magnifier {
+            transform: translateY(-15px);
+            height: 8px;
+          }
+          input:not(:placeholder-shown) ~ .magnifier {
+            transform: translateY(-15px);
+            height: 8px;
+          }
+
+          input:focus ~ label {
+            transform: translateY(-17px);
+            font-size: 10px;
+          }
+          input:not(:placeholder-shown) ~ label {
+            transform: translateY(-17px);
+            font-size: 10px;
+          }
+        }
+      }
+      .filter {
+        display: none;
+        float: right;
+        p {
+          display: inline-block;
+          padding-right: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+    table {
+      margin-top: 20px;
+    }
+    th {
+      padding: 8px 4px;
+      font-size: 12px;
+    }
+    td {
+      font-size: 12px;
+      padding: 20px 5px 20px 5px;
+    }
   }
 }

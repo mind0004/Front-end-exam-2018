@@ -5,17 +5,38 @@ import Overview from "./Overview";
 import Donations from "./Donations";
 import Messages from "./Messages";
 
-export class Dashboard extends Component {
+class Dashboard extends Component {
+  state = {
+    showMobileMenu: false
+  };
+  toggleMobileMenu = () => {
+    if (this.state.showMobileMenu) {
+      console.log("Close it");
+    } else {
+      console.log("Open it");
+    }
+    this.setState({
+      showMobileMenu: !this.state.showMobileMenu
+    });
+  };
   render() {
     return (
       <BrowserRouter>
-        <div id="dashboard">
-          <Navbar />
-          <Switch>
-            <Route exact path="/dashboard/" component={Overview} />
-            <Route path="/dashboard/donations" component={Donations} />
-            <Route path="/dashboard/messages" component={Messages} />
-          </Switch>
+        <div>
+          <Navbar
+            showMobileMenu={this.state.showMobileMenu}
+            toggleMobileMenu={this.toggleMobileMenu}
+          />
+          <div
+            id="dashboard-components"
+            className={this.state.showMobileMenu ? "mobile-menu-active" : ""}
+          >
+            <Switch>
+              <Route exact path="/dashboard/" component={Overview} />
+              <Route path="/dashboard/donations" component={Donations} />
+              <Route path="/dashboard/messages" component={Messages} />
+            </Switch>
+          </div>
         </div>
       </BrowserRouter>
     );

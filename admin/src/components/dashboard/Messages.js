@@ -5,7 +5,7 @@ class Messages extends Component {
   render() {
     return (
       <div>
-        <h2>Messages</h2>
+        <h2 className="dashboard-title">Messages</h2>
         <Messagelist />
       </div>
     );

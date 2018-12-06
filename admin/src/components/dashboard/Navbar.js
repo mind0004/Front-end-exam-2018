@@ -2,14 +2,33 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {
+  state = {
+    showMobileMenu: false
+  };
+
   render() {
     return (
       <div id="navbar">
-        <div className="container">
+        <div
+          id="burger-menu"
+          onClick={this.props.toggleMobileMenu}
+          className={this.props.showMobileMenu ? "active" : ""}
+        >
+          <span />
+          <span />
+          <span />
+        </div>
+
+        <div
+          className={
+            this.props.showMobileMenu
+              ? "container mobile-menu-active"
+              : "container"
+          }
+        >
           <div className="logo">
             <h3>Polyeco</h3>
           </div>
-
           <nav>
             <ul>
               <li>

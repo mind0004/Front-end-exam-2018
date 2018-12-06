@@ -10,12 +10,20 @@ class DonatorList extends Component {
 
     return (
       <div>
-        <div id="donator-list">
+        <div className="donator-list">
           <div className="card list">
             <header>
               <div className="search">
                 <div className="input-field">
                   <input type="text" name="email" placeholder=" " />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-name="Layer 1"
+                    viewBox="0 0 96 109"
+                    className="magnifier"
+                  >
+                    <path d="M96 102L64 62a37 37 0 1 0-9 7l32 40a1 1 0 0 0 2 0l6-5a1 1 0 0 0 1-2zM18 52a24 24 0 1 1 34 4 24 24 0 0 1-34-4z" />
+                  </svg>
                   <label>Type to search...</label>
                   <div className="underline" />
                 </div>
@@ -35,11 +43,11 @@ class DonatorList extends Component {
             <table>
               <tbody>
                 <tr>
-                  <th className="active">Date</th>
-                  <th>Name</th>
-                  <th>E-mail</th>
-                  <th>Type</th>
-                  <th>Amount</th>
+                  <th className="date active">Date</th>
+                  <th className="name">Name</th>
+                  <th className="email">E-mail</th>
+                  <th className="type">Type</th>
+                  <th className="amount">Amount</th>
                 </tr>
                 {allDonations}
               </tbody>

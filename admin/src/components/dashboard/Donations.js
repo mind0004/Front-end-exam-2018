@@ -4,8 +4,8 @@ import DonatorList from "./donations/DonatorList";
 class Donations extends Component {
   render() {
     return (
-      <div>
-        <h2>Donations</h2>
+      <div id="donations">
+        <h2 className="dashboard-title">Donations</h2>
 
         <DonatorList />
       </div>
