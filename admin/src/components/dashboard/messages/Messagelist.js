@@ -10,10 +10,27 @@ class Messagelist extends Component {
 
     return (
       <div>
-        <div id="donator-list">
-          <h3>Donator List</h3>
+        <div id="message-list">
+          <div className="card list">
+            <header>
+              <div className="search">
+                <div className="input-field">
+                  <input type="text" name="email" placeholder=" " />
+                  <label>Type to search...</label>
+                  <div className="underline" />
+                </div>
+              </div>
+              <div className="filter clearfix">
+                <p>Filter by:</p>
+                <select>
+                  <option value="date">Date</option>
+                  <option value="name">Name</option>
+                  <option value="email">E-mail</option>
+                  <option value="institute">Institute</option>
+                </select>
+              </div>
+            </header>
 
-          <div className="card">
             <table>
               <tbody>
                 <tr>

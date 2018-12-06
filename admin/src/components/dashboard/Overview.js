@@ -8,8 +8,7 @@ class Overview extends Component {
   render() {
     return (
       <div id="overview">
-        <h3>Overview</h3>
-
+        <h2>Overview</h2>
         <Summary />
         <DonationsByType />
         <TopDonors />
