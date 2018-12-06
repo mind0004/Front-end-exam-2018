@@ -23,7 +23,7 @@ a {
 #dashboard {
   background: #f6f6f6;
   min-height: 100vh;
-  margin-left: $navbar-width;
-  width: calc(100vw - #{$navbar-width});
+  margin-left: 300px;
+  width: calc(100vw - 300px);
   position: relative;
 }

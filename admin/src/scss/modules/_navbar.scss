@@ -7,11 +7,56 @@
   left: 0;
   position: fixed;
   top: 0;
-  width: $navbar-width;
+  width: 300px;
   z-index: 40;
-  .container {
+  h3 {
+    color: #464646;
+    font-size: 40px;
     padding: 10px;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+  }
+  .container {
+    nav {
+      margin-top: 30px;
+      width: 100%;
+      ul {
+        list-style-type: none;
+        li {
+          padding: 10px 0px;
+          position: relative;
+          width: 100%;
+        }
+        a {
+          display: block;
+          position: relative;
+          width: calc(100% - 40px);
+          font-size: 25px;
+          color: #464646;
+          padding: 20px;
+          z-index: 55;
+          .active-background {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 0%;
+            height: 100%;
+            background: rgba(142, 189, 216, 0.35);
+            z-index: 50;
+            transition: all 0.3s;
+            > div {
+              background: #8ebdd8;
+              float: right;
+              height: 100%;
+              width: 10px;
+            }
+          }
+
+          &.active {
+            .active-background {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 }

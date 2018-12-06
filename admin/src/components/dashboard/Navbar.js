@@ -11,9 +11,32 @@ class Navbar extends Component {
           </div>
 
           <nav>
-            <NavLink to="./">Overview</NavLink>
-            <NavLink to="/dashboard/donations">Donations</NavLink>
-            <NavLink to="/dashboard/contact">Contact</NavLink>
+            <ul>
+              <li>
+                <NavLink exact to="/dashboard/">
+                  Overview
+                  <div className="active-background">
+                    <div />
+                  </div>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/donations">
+                  Donations
+                  <div className="active-background">
+                    <div />
+                  </div>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/contact">
+                  Contact
+                  <div className="active-background">
+                    <div />
+                  </div>
+                </NavLink>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
