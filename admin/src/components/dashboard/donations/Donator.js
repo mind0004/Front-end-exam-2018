@@ -5,11 +5,13 @@ class Donator extends Component {
     return (
       <div id="donator">
         <div>
-          <p className="date">12/11/2018</p>
-          <p className="name">Johhny Johsen</p>
-          <p className="email">johnsen@hotmail.com</p>
-          <p className="type">One-time</p>
-          <p className="amount">20$</p>
+          <p className="date">{this.props.donation.date}</p>
+          <p className="name">{this.props.donation.name}</p>
+          <p className="email">{this.props.donation.email}</p>
+          <p className="type">{this.props.donation.type}</p>
+          <p className="amount">
+            {this.props.donation.amount + this.props.donation.currency}
+          </p>
         </div>
       </div>
     );
