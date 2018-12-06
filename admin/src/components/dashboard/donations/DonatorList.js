@@ -11,7 +11,17 @@ class DonatorList extends Component {
     return (
       <div>
         <h3>Donator List</h3>
-        {allDonations}
+
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Type</th>
+            <th>Amount</th>
+          </tr>
+          {allDonations}
+        </table>
       </div>
     );
   }
