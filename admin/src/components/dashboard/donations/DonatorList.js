@@ -9,19 +9,23 @@ class DonatorList extends Component {
     });
 
     return (
-      <div>
+      <div id="donator-list">
         <h3>Donator List</h3>
 
-        <table>
-          <tr>
-            <th>Date</th>
-            <th>Name</th>
-            <th>E-mail</th>
-            <th>Type</th>
-            <th>Amount</th>
-          </tr>
-          {allDonations}
-        </table>
+        <div className="card">
+          <table>
+            <tbody>
+              <tr>
+                <th className="active">Date</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Type</th>
+                <th>Amount</th>
+              </tr>
+              {allDonations}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
