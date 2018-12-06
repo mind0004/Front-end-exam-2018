@@ -1,6 +1,7 @@
 const initState = {
   donations: [
     {
+      id: 1,
       amount: 10,
       currency: "$",
       date: "05/12/2018",
@@ -9,6 +10,7 @@ const initState = {
       type: "one-time"
     },
     {
+      id: 2,
       amount: 22,
       currency: "$",
       date: "03/11/2018",
@@ -17,6 +19,7 @@ const initState = {
       type: "one-time"
     },
     {
+      id: 3,
       amount: 300,
       currency: "$",
       date: "02/12/2018",
@@ -25,7 +28,33 @@ const initState = {
       type: "recurring"
     }
   ],
-  messages: []
+
+  messages: [
+    {
+      id: 4,
+      date: "02/12/2018",
+      email: "boyler@hotmail.com",
+      institute: "KEA",
+      message: "Hej med jer",
+      name: "Susan boyle"
+    },
+    {
+      id: 5,
+      date: "02/12/2018",
+      email: "boyler@hotmail.com",
+      institute: "KEA",
+      message: "Hej med jer",
+      name: "Susan boyle"
+    },
+    {
+      id: 6,
+      date: "02/12/2018",
+      email: "boyler@hotmail.com",
+      institute: "KEA",
+      message: "Hej med jer",
+      name: "Susan boyle"
+    }
+  ]
 };
 
 const rootReducer = (state = initState, action) => {
