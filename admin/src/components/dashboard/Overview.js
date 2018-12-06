@@ -3,9 +3,11 @@ import Summary from "./overview/Summary";
 import DonationsByType from "./overview/DonationsByType";
 import TopDonors from "./overview/TopDonors";
 import RecurringDonations from "./overview/RecurringDonations";
+import { connect } from "react-redux";
 
 class Overview extends Component {
   render() {
+    console.log(this.props.overview);
     return (
       <div id="overview">
         <h3>Overview</h3>
@@ -19,4 +21,10 @@ class Overview extends Component {
   }
 }
 
-export default Overview;
+const mapStatetoProps = (state, ownProps) => {
+  return {
+    overview: state.overview
+  };
+};
+
+export default connect(mapStatetoProps)(Overview);

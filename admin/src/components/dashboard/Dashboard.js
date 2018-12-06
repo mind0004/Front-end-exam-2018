@@ -14,7 +14,7 @@ export class Dashboard extends Component {
 
           <Navbar />
           <Switch>
-            <Route exact path="./" component={Overview} />
+            <Route exact path="/dashboard/" component={Overview} />
             <Route path="/dashboard/donations" component={Donations} />
             <Route path="/dashboard/contact" component={Contact} />
           </Switch>
