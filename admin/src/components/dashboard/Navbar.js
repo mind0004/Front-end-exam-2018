@@ -29,8 +29,8 @@ class Navbar extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/contact">
-                  Contact
+                <NavLink to="/dashboard/messages">
+                  Messages
                   <div className="active-background">
                     <div />
                   </div>

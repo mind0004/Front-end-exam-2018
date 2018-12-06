@@ -5,7 +5,7 @@ class Donations extends Component {
   render() {
     return (
       <div>
-        <h3>Donations</h3>
+        <h2>Donations</h2>
 
         <DonatorList />
       </div>
