@@ -19,3 +19,11 @@ a {
   text-decoration: none;
   color: $blue;
 }
+
+#dashboard {
+  background: #f6f6f6;
+  min-height: 100vh;
+  margin-left: $navbar-width;
+  width: calc(100vw - #{$navbar-width});
+  position: relative;
+}

@@ -1,0 +1,17 @@
+#navbar {
+  background: white;
+  color: #919191;
+  float: left;
+  font-size: 14px;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: $navbar-width;
+  z-index: 40;
+  .container {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+  }
+}

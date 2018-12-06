@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Background from "../../assets/img/background-line-grey-half.svg";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   render() {
@@ -31,7 +32,9 @@ class Login extends Component {
             </div>
 
             <div className="submit">
-              <input type="submit" value="Login" className="submit-button" />
+              <Link to="./dashboard">
+                <input type="submit" value="Login" className="submit-button" />
+              </Link>
             </div>
           </form>
         </div>
