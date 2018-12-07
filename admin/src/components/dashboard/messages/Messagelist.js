@@ -1,12 +1,21 @@
 import React, { Component } from "react";
 import Message from "./Message";
 import { connect } from "react-redux";
+import { compose } from "redux";
+import { firestoreConnect } from "react-redux-firebase";
 
-class Messagelist extends Component {
+class MessageList extends Component {
   render() {
-    const allMessages = this.props.messages.map(message => {
-      return <Message key={message.id} message={message} />;
-    });
+    console.log(this.props.messages);
+    const allMessages = this.props.messages ? (
+      this.props.messages.map(message => {
+        return <Message key={message.id} message={message} />;
+      })
+    ) : (
+      <tr className="message">
+        <td className="date">Loading</td>
+      </tr>
+    );
 
     return (
       <div>
@@ -57,10 +66,15 @@ class Messagelist extends Component {
     );
   }
 }
-const mapStatetoProps = (state, ownProps) => {
+
+const mapStateToProps = (state, ownProps) => {
+  console.log(state);
   return {
-    messages: state.messages
+    messages: state.firestore.ordered.messages
   };
 };
 
-export default connect(mapStatetoProps)(Messagelist);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([{ collection: "messages" }])
+)(MessageList);
