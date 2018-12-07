@@ -3,11 +3,13 @@ import donationsReducer from "./donationsReducer";
 import messagesReducer from "./messagesReducer";
 
 import { combineReducers } from "redux";
+import { firestoreReducer } from "redux-firestore";
 
 const rootReducer = combineReducers({
   overview: overviewReducer,
   donations: donationsReducer,
-  messages: messagesReducer
+  messages: messagesReducer,
+  firestore: firestoreReducer
 });
 
 export default rootReducer;

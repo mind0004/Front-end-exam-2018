@@ -1,12 +1,21 @@
 import React, { Component } from "react";
 import Donator from "./Donator";
 import { connect } from "react-redux";
+import { compose } from "redux";
+import { firestoreConnect } from "react-redux-firebase";
 
 class DonatorList extends Component {
   render() {
-    const allDonations = this.props.donations.map(donation => {
-      return <Donator key={donation.id} donation={donation} />;
-    });
+    console.log(this.props.donations);
+    const allDonations = this.props.donations ? (
+      this.props.donations.map(donation => {
+        return <Donator key={donation.id} donation={donation} />;
+      })
+    ) : (
+      <tr className="donator">
+        <td className="date">Loading</td>
+      </tr>
+    );
 
     return (
       <div>
@@ -59,10 +68,14 @@ class DonatorList extends Component {
   }
 }
 
-const mapStatetoProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
+  console.log(state);
   return {
-    donations: state.donations
+    donations: state.firestore.ordered.donations
   };
 };
 
-export default connect(mapStatetoProps)(DonatorList);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([{ collection: "donations" }])
+)(DonatorList);
