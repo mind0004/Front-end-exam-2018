@@ -138,6 +138,7 @@
   }
 }
 
+//Submit button for forms
 .submit-button {
   margin-top: 10px;
   background: $blue;
@@ -150,6 +151,7 @@
   border: none;
 }
 
+//"Table" list which uses a header for search field, filter,... .
 .list {
   width: calc(100% - 90px);
   margin-top: 20px;

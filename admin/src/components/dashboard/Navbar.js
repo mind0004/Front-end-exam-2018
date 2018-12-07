@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import UserPicture from "../../assets/img/user-picture.png";
 
 class Navbar extends Component {
   state = {
@@ -20,11 +21,10 @@ class Navbar extends Component {
         </div>
 
         <div
-          className={
-            this.props.showMobileMenu
-              ? "container mobile-menu-active"
-              : "container"
-          }
+          className={[
+            "container",
+            this.props.showMobileMenu ? "mobile-menu-active" : ""
+          ].join(" ")}
         >
           <div className="logo">
             <h3>Polyeco</h3>
@@ -57,6 +57,12 @@ class Navbar extends Component {
               </li>
             </ul>
           </nav>
+
+          <div className="user">
+            <img src={UserPicture} alt="Profile" />
+            <p className="name">Johnny</p>
+            <p className="logout-button">Logout</p>
+          </div>
         </div>
       </div>
     );

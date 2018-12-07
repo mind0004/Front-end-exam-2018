@@ -12,6 +12,7 @@
     height: 100%;
     width: 230px;
     transition: all 0.3s;
+    position: relative;
     h3 {
       color: #464646;
       font-size: 35px;
@@ -58,6 +59,30 @@
             }
           }
         }
+      }
+    }
+
+    .user {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      bottom: 40px;
+      left: 0px;
+      right: 0px;
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        width: 70px;
+        margin: 0 auto;
+      }
+      .name {
+        color: $black;
+      }
+      .logout-button {
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 14px;
       }
     }
   }
