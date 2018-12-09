@@ -11,10 +11,12 @@ class Overview extends Component {
     return (
       <div id="overview">
         <h2 className="dashboard-title">Overview</h2>
-        <Summary />
-        <DonationsByType />
-        <TopDonors />
-        <RecurringDonations />
+        <div className="container">
+          <Summary />
+          <DonationsByType />
+          <TopDonors />
+          <RecurringDonations />
+        </div>
       </div>
     );
   }

@@ -1,21 +1,29 @@
 #dashboard {
   background: #f6f6f6;
-  min-height: 100vh;
-  width: 100%;
-}
+  min-height: calc(100vh - 20px);
+  width: 100vw;
+  max-width: 100%;
+  padding-bottom: 20px;
 
-#dashboard-components {
-  background: #f6f6f6;
-  min-height: 100vh;
-  margin-left: 230px;
-  width: calc(100vw - 230px);
-  position: relative;
-  transition: all 0.3s;
-  .dashboard-title {
-    color: #00abd6;
-    font-size: 30px;
-    padding: 30px 0px 0px 30px;
-    font-weight: 500;
+  #dashboard-components {
+    background: #f6f6f6;
+    min-height: 100vh;
+    margin-left: 230px;
+    width: calc(100vw - 230px);
+    position: relative;
+    transition: all 0.3s;
+    .dashboard-title {
+      color: #00abd6;
+      font-size: 30px;
+      padding: 30px 0px 20px 0px;
+      font-weight: 500;
+    }
+    > .main-content {
+      width: calc(100vw - 260px);
+      //margin: 0 auto 0 30px;
+      position: relative;
+      margin: 0 auto;
+    }
   }
 }
 

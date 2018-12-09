@@ -22,7 +22,7 @@ class Dashboard extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div id="dashboard">
           <Navbar
             showMobileMenu={this.state.showMobileMenu}
             toggleMobileMenu={this.toggleMobileMenu}
@@ -31,11 +31,13 @@ class Dashboard extends Component {
             id="dashboard-components"
             className={this.state.showMobileMenu ? "mobile-menu-active" : ""}
           >
-            <Switch>
-              <Route exact path="/dashboard/" component={Overview} />
-              <Route path="/dashboard/donations" component={Donations} />
-              <Route path="/dashboard/messages" component={Messages} />
-            </Switch>
+            <div className="main-content">
+              <Switch>
+                <Route exact path="/dashboard/" component={Overview} />
+                <Route path="/dashboard/donations" component={Donations} />
+                <Route path="/dashboard/messages" component={Messages} />
+              </Switch>
+            </div>
           </div>
         </div>
       </BrowserRouter>
