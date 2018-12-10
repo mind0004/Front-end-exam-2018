@@ -70,11 +70,6 @@
             }
           }
 
-          #subcheckbox {
-            margin-top: 5vh;
-            margin-bottom: 5vh;
-          }
-
           .a-button {
             margin: 0 auto;
           }
@@ -122,6 +117,56 @@
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  .type {
+    margin: 5vh 0vw;
+    input,
+    p,
+    .dropdown {
+      float: left;
+      padding: 0px 5px;
+      font-size: 16px !important;
+    }
+
+    .dropdown {
+      position: relative;
+      height: 20px;
+      overflow: hidden;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      ul {
+        padding-right: 10px;
+      }
+      li {
+        padding: 2px 2px 5px 2px;
+        transition: all 0.3s;
+      }
+      li:hover {
+        background: lightblue;
+      }
+
+      .line {
+        position: absolute;
+        top: 19px;
+        height: 1px;
+        width: 100%;
+        background: black;
+      }
+      .arrow {
+        position: absolute;
+        right: 1px;
+        top: 2px;
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
   }
 }
 

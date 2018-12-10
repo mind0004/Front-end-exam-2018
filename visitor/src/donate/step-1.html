@@ -47,7 +47,10 @@
 
         <div id="contentdiv">
           <div id="donatemoney">
-            <div class="slidecontainer">
+              <form>
+                  <div class="slidecontainer">
+
+              
               <p>$<span id="demo"></span></p>
               <input
                 type="range"
@@ -59,20 +62,31 @@
               />
             </div>
 
-            <input
-              id="subcheckbox"
-              type="checkbox"
-              name="vehicle1"
-              value="Bike"
-            />
-            Make it <strong>monthly</strong><br />
+            <div class="type">
+                <input
+                id="checkbox"
+                type="checkbox"
+                name="recurring"
+              />
+              <p>Make it </p>
+              <div class="dropdown">
+                <ul>
+                  <li><strong>monthly</strong></li>
+                  <li><strong>yearly</strong></li>
+                </ul>
+                <div class="line"></div>
+                <i class="arrow"></i>
+              </div>
+            </div>
+            
 
             <a href="step-2.html" class="a-button step1Button">Proceed</a>
           </div>
+        </form>
         </div>
       </div>
     </div>
 
-    <script src="../scripts/donate.js"></script>
+    <script src="../scripts/donate-1.js"></script>
   </body>
 </html>
