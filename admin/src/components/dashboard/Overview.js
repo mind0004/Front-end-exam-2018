@@ -4,28 +4,40 @@ import DonationsByType from "./overview/DonationsByType";
 import TopDonors from "./overview/TopDonors";
 import RecurringDonations from "./overview/RecurringDonations";
 import { connect } from "react-redux";
+import { compose } from "redux";
+import { firestoreConnect } from "react-redux-firebase";
 
 class Overview extends Component {
   render() {
-    console.log(this.props.overview);
+    //console.log(this.props.overview);
+
+    const allOverview = this.props.overview ? (
+      <div className="container">
+        <Summary overview={this.props.overview[0]} />
+        <DonationsByType />
+        <TopDonors />
+        <RecurringDonations />
+      </div>
+    ) : (
+      <p>Loading</p>
+    );
     return (
       <div id="overview">
         <h2 className="dashboard-title">Overview</h2>
-        <div className="container">
-          <Summary />
-          <DonationsByType />
-          <TopDonors />
-          <RecurringDonations />
-        </div>
+        {allOverview}
       </div>
     );
   }
 }
 
-const mapStatetoProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
+  //console.log(state);
   return {
-    overview: state.overview
+    overview: state.firestore.ordered.overview
   };
 };
 
-export default connect(mapStatetoProps)(Overview);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([{ collection: "overview" }])
+)(Overview);
