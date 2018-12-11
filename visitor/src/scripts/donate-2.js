@@ -22,8 +22,9 @@ const nameInput = document.querySelector("#step-2 input[name='name']");
 const emailInput = document.querySelector("#step-2 input[name='email']");
 
 const step2Button = document.querySelector("#step-2 .step2Button");
+const paymentForm = document.querySelector("#step-2 #paymentForm");
 
-step2Button.addEventListener("click", createDonation);
+paymentForm.addEventListener("submit", createDonation);
 
 function createDonation(e) {
   e.preventDefault();
