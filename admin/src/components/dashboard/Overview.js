@@ -14,7 +14,7 @@ class Overview extends Component {
     const allOverview = this.props.overview ? (
       <div className="container">
         <Summary overview={this.props.overview[0]} />
-        <DonationsByType />
+        <DonationsByType overview={this.props.overview[0]} />
         <TopDonors />
         <RecurringDonations />
       </div>
