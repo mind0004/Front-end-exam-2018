@@ -10,6 +10,7 @@
     min-height: 100vh;
     margin-left: 230px;
     width: calc(100vw - 230px);
+    max-width: calc(100% - 230px);
     position: relative;
     transition: all 0.3s;
     .dashboard-title {
@@ -36,14 +37,22 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
-  #dashboard-components {
-    margin-left: 160px;
-    width: calc(100vw - 160px);
-    .dashboard-title {
-      color: #00abd6;
-      font-size: 20px;
-      padding: 20px 0px 0px 20px;
-      font-weight: 500;
+  #dashboard {
+    #dashboard-components {
+      margin-left: 160px;
+      width: calc(100vw - 160px);
+      max-width: calc(100% - 160px);
+
+      .dashboard-title {
+        color: #00abd6;
+        font-size: 20px;
+        padding: 20px 0px 0px 20px;
+        font-weight: 500;
+      }
+
+      > .main-content {
+        width: calc(100vw - 200px);
+      }
     }
   }
 }
@@ -58,19 +67,23 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
-  #dashboard-components.mobile-menu-active {
-    margin-left: 160px;
-    width: calc(100vw - 160px);
-  }
-
-  #dashboard-components {
-    margin-left: 0px;
-    width: 100vw;
-    .dashboard-title {
-      color: #00abd6;
-      font-size: 20px;
-      padding: 60px 0px 0px 20px;
-      font-weight: 500;
+  #dashboard {
+    #dashboard-components.mobile-menu-active {
+      margin-left: 160px;
+      width: calc(100vw - 160px);
+    }
+    #dashboard-components {
+      margin-left: 0px;
+      width: 100vw;
+      .dashboard-title {
+        color: #00abd6;
+        font-size: 20px;
+        padding: 60px 0px 0px 20px;
+        font-weight: 500;
+      }
+      > .main-content {
+        max-width: 99vw;
+      }
     }
   }
 }

@@ -16,7 +16,7 @@ class Overview extends Component {
       this.props.overview && this.props.messages ? (
         <div className="container">
           <Summary overview={this.props.overview[0]} />
-          <DonationsByType />
+          <DonationsByType overview={this.props.overview[0]} />
           <TopDonors overview={this.props.overview[0]} />
           <LatestMessages messages={this.props.messages} />
         </div>
