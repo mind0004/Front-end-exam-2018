@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Summary extends Component {
   render() {
-    console.log(this.props.overview);
     return (
       <div className="summary card">
         <div className="card-content">

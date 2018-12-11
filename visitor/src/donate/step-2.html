@@ -17,78 +17,129 @@
     <div id="payment-grid">
       <div class="card">
         <h2>Credentials</h2>
-
-        <div class="input-field">
-          <input type="text" name="name" placeholder=" " /> <label>Name</label>
-          <div class="underline"></div>
-        </div>
-
-        <input id="subcheckbox" type="checkbox" name="vehicle1" value="Bike" />
-        Keep me anonymous<br />
-
-        <div class="input-field">
-          <input type="text" name="email" placeholder=" " />
-          <label>Email</label>
-          <div class="underline"></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>Payment details</h2>
-
-        <input id="subcheckbox" type="checkbox" name="vehicle1" value="Bike" />
-        Credit Card<br />
-
-        <div class="input-field">
-          <input type="text" name="name" placeholder=" " />
-          <label>Card number</label>
-          <div class="underline"></div>
-        </div>
-
-        <div class="input-field">
-          <input type="text" name="name" placeholder=" " />
-          <label>Cardholder Name</label>
-          <div class="underline"></div>
-        </div>
-
-        <div id="monthyear-grid">
+        <form>
           <div class="input-field">
-            <input type="text" name="name" placeholder=" " />
-            <label>Month</label>
+            <input
+              id="name-input"
+              type="text"
+              name="name"
+              placeholder=" "
+              required
+            />
+            <label for="name-input">Name</label>
             <div class="underline"></div>
           </div>
 
-          <div class="input-field">
-            <input type="text" name="name" placeholder=" " />
-            <label>Year</label>
-            <div class="underline"></div>
-          </div>
-        </div>
-
-        <div class="input-field">
-          <input type="text" name="name" placeholder=" " /> <label>CVV</label>
-          <div class="underline"></div>
-        </div>
-
-        <div id="paypalbox">
           <input
             id="subcheckbox"
             type="checkbox"
             name="vehicle1"
             value="Bike"
           />
-          Paypal<br />
-        </div>
+          Keep me anonymous<br />
+
+          <div class="input-field">
+            <input
+              id="email-input"
+              type="text"
+              name="email"
+              placeholder=" "
+              required
+            />
+            <label for="email-input">Email</label>
+            <div class="underline"></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Payment details</h2>
+
+        <form>
+          <div class="input-field">
+            <input
+              id="cardnumber-input"
+              type="text"
+              name="name"
+              placeholder=" "
+              required
+            />
+            <label for="cardnumber-input">Card number</label>
+            <div class="underline"></div>
+          </div>
+
+          <div class="input-field">
+            <input
+              id="cardname-input"
+              type="text"
+              name="name"
+              placeholder=" "
+              required
+            />
+            <label for="cardname-input"></label>
+            <div class="underline"></div>
+          </div>
+
+          <div id="monthyear-grid">
+            <div class="input-field">
+              <input
+                id="cardmonth-input"
+                type="text"
+                name="name"
+                placeholder=" "
+                required
+              />
+              <label for="cardmonth-input">Month</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+              <input
+                id="cardyear-input"
+                type="text"
+                name="name"
+                placeholder=" "
+                required
+              />
+              <label for="cardyear-input">Year</label>
+              <div class="underline"></div>
+            </div>
+          </div>
+
+          <div class="input-field">
+            <input
+              id="cvv-input"
+              type="text"
+              name="name"
+              placeholder=" "
+              required
+            />
+            <label for="cvv-input">CVV</label>
+            <div class="underline"></div>
+          </div>
+
+          <div id="paypalbox">
+            <input
+              id="subcheckbox"
+              type="checkbox"
+              name="vehicle1"
+              value="Bike"
+            />
+            Paypal<br />
+          </div>
+
+          <button class="a-button step2Button">Proceed</button>
+        </form>
       </div>
     </div>
 
-   <div id="end">
-    <a href="step-3.html" class="a-button step2Button">Proceed</a>
-    <h2 id="backtopoly">< step back</h2></back>
-  </div>
-  
-  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-  <script src="../scripts/vendors/moment.min.js"></script>
-  <script src="../scripts/donate-2.js"></script>
+    <div id="end">
+      <!-- <a href="step-3.html" class="a-button step2Button">Proceed</a> -->
+      <h2 id="backtopoly">&amp; step back</h2>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="../scripts/vendors/moment.min.js"></script>
+    <script src="../scripts/donate-2.js"></script>
   </body>
 </html>
