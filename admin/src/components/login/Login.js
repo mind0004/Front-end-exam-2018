@@ -2,7 +2,39 @@ import React, { Component } from "react";
 import Background from "../../assets/img/background-line-grey-half.svg";
 import { Link } from "react-router-dom";
 
+import { connect } from "react-redux";
+import { signIn } from "../../store/actions/authAction";
+
 class Login extends Component {
+  state = {
+    email: null,
+    password: null
+  };
+
+  handleSubmit = () => {
+    console.log(typeof this.state.email);
+
+    this.props.signIn(this.state);
+  };
+
+  handleInputChangeEmail = e => {
+    //console.log(e.target.name, " = ", e.target.value);
+
+    this.setState({
+      email: e.target.value
+    });
+    //console.log(this.state);
+  };
+
+  handleInputChangePassword = e => {
+    //console.log(e.target.name, " = ", e.target.value);
+
+    this.setState({
+      password: e.target.value
+    });
+    //console.log(this.state);
+  };
+
   render() {
     return (
       <div id="login">
@@ -16,13 +48,23 @@ class Login extends Component {
           <h2>Admin Login</h2>
           <form>
             <div className="input-field">
-              <input type="text" name="email" placeholder=" " />
+              <input
+                type="email"
+                name="email"
+                placeholder=" "
+                onChange={this.handleInputChangeEmail}
+              />
               <label>E-mail</label>
               <div className="underline" />
             </div>
 
             <div className="input-field">
-              <input type="password" name="email" placeholder=" " />
+              <input
+                type="password"
+                name="password"
+                placeholder=" "
+                onChange={this.handleInputChangePassword}
+              />
               <label>Password</label>
               <div className="underline" />
             </div>
@@ -31,7 +73,7 @@ class Login extends Component {
               <p>Forgot email/password?</p>
             </div>
 
-            <div className="submit">
+            <div className="submit" onClick={this.handleSubmit}>
               <Link to="./dashboard">
                 <input type="submit" value="Login" className="submit-button" />
               </Link>
@@ -47,4 +89,22 @@ class Login extends Component {
   }
 }
 
-export default Login;
+//make authError state from redux available to this component as "this.props.authError"
+const mapStateToProps = state => {
+  return {
+    authError: state.auth.authError
+  };
+};
+
+//use the signIn action as a prop which takes a parameter (the credentials)
+//run the action and dispatch a response to authReducer with updated state
+const mapDispatchToProps = dispatch => {
+  return {
+    signIn: creds => dispatch(signIn(creds))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);
