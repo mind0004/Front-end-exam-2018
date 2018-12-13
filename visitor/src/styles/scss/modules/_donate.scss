@@ -2,6 +2,18 @@
 
 // STEP 1
 #step-1 {
+  .background {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -100;
+  }
+
   .donate-grid {
     display: grid;
     grid-gap: 50px 100px;
@@ -9,31 +21,54 @@
     padding: 10px;
 
     .card {
-      height: 60vh;
-      width: 20vw;
+      z-index: 20;
+      height: 80vh;
+      width: 25vw;
+      background-color: white;
 
       display: block;
       justify-self: center;
 
       p {
-        font-size: 1.2vw;
+        font-size: 1.4em;
+      }
+
+      /* strong {
+        font-size: 1.4em;
+      } */
+
+      h2 {
+        font-size: 2em;
+      }
+
+      .donate-header {
+        margin-left: vw;
+        margin-top: 0.4vh;
       }
 
       #recentdonors {
         h2 {
           border-bottom: 1px solid black;
+          margin-bottom: 2vh;
+          border-collapse: separate;
+          border-spacing: 15px 50px;
+          margin-left: 0.4vw;
+          margin-top: 0.4vh;
         }
       }
       .recentdonors-grid {
         margin-bottom: 3vw;
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 70% 30%;
       }
 
       #topdonors {
         h2 {
           border-bottom: 1px solid black;
+          margin-bottom: 2vh;
+          border-collapse: separate;
+          border-spacing: 15px 50px;
         }
       }
 
@@ -41,7 +76,7 @@
         margin-bottom: 3vw;
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 70% 30%;
       }
 
       .card-content2 {
@@ -60,7 +95,7 @@
           text-align: center;
           .slidecontainer {
             p {
-              font-size: 5vw;
+              font-size: 4.2em;
               margin-bottom: 20px;
             }
 
@@ -72,6 +107,9 @@
 
           .a-button {
             margin: 0 auto;
+            font-size: 1.8em;
+            padding: 14px 23px;
+            border-radius: 50px;
           }
         }
       }
@@ -88,14 +126,17 @@
 
   .slider {
     -webkit-appearance: none;
-    width: 100%;
-    height: 15px;
+    height: 10px;
     border-radius: 5px;
-    background: gray;
+    background: $blue;
     outline: none;
     opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+
+    input {
+      margin-top: 4vh;
+    }
   }
 
   .slider:hover {
@@ -107,6 +148,7 @@
     appearance: none;
     width: 25px;
     height: 25px;
+    border: 1px solid black;
     border-radius: 50%;
     background: white;
     cursor: pointer;
@@ -121,12 +163,13 @@
 
   .type {
     margin: 5vh 0vw;
+    margin-top: 5vh;
     input,
     p,
     .dropdown {
       float: left;
       padding: 0px 5px;
-      font-size: 16px !important;
+      font-size: 16px;
     }
 
     .dropdown {
@@ -172,6 +215,18 @@
 
 // STEP 2
 #step-2 {
+  .background {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -100;
+  }
+
   #payment-grid {
     display: grid;
     grid-gap: 50px 100px;
@@ -220,6 +275,18 @@
 
 // STEP 3
 #step-3 {
+  .background {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -100;
+  }
+
   #backtopoly {
     text-align: center;
     margin-top: 2vh;
@@ -273,24 +340,46 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
-  #donate {
-  }
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) {
-  #donate {
+  #step-1 {
+    .donate-grid {
+      .card {
+        width: 35vw;
+        h2 {
+          font-size: 1.6em;
+        }
+      }
+    }
   }
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
-  #donate {
+  #step-1 {
+    .donate-grid {
+      grid-template-columns: repeat(1, 1fr);
+      .card {
+        width: 50vw;
+        h2 {
+          font-size: 2em;
+        }
+      }
+    }
   }
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
-  #donate {
+  #step-1 {
+    .donate-grid {
+      .card {
+        h2 {
+          font-size: 1.4em;
+        }
+      }
+    }
   }
 }
