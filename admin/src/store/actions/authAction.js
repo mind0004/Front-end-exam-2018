@@ -25,3 +25,16 @@ export const signIn = credentials => {
       });
   };
 };
+
+export const signOut = () => {
+  return (dispatch, getState, { getFirebase }) => {
+    const firebase = getFirebase();
+
+    firebase
+      .auth()
+      .signOut() //signOut method of firebase
+      .then(() => {
+        dispatch({ type: "SIGNOUT_SUCCESS" }); //on success, dispatch "SIGNOUT_SUCCESS" to reducer
+      });
+  };
+};

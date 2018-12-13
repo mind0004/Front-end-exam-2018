@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import UserPicture from "../../assets/img/user-picture.png";
+import { connect } from "react-redux";
+import { signOut } from "../../store/actions/authAction";
 
 class Navbar extends Component {
   state = {
     showMobileMenu: false
+  };
+
+  handleLogout = () => {
+    this.props.signOut();
   };
 
   render() {
@@ -61,7 +67,9 @@ class Navbar extends Component {
           <div className="user">
             <img src={UserPicture} alt="Profile" />
             <p className="name">Johnny</p>
-            <p className="logout-button">Logout</p>
+            <p className="logout-button" onClick={this.handleLogout}>
+              Logout
+            </p>
           </div>
         </div>
       </div>
@@ -69,4 +77,14 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+//use the signOut action
+const mapDispatchToProps = dispatch => {
+  return {
+    signOut: () => dispatch(signOut())
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps //only need this
+)(Navbar);
