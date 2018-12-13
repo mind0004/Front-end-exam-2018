@@ -17,6 +17,12 @@ class Login extends Component {
     this.props.signIn(this.state);
   };
 
+  handleInputChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  };
+
   handleInputChangeEmail = e => {
     //console.log(e.target.name, " = ", e.target.value);
 

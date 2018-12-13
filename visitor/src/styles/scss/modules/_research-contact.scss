@@ -1,10 +1,5 @@
 #research-contact {
   main {
-    width: 100vw;
-    max-width: 100%;
-    position: relative;
-    min-height: 100vh;
-
     .background {
       width: 100vw;
       max-width: 100%;
@@ -41,6 +36,7 @@
       right: 0px;
       margin: auto;
       padding: 20px;
+      z-index: 10;
 
       header {
         text-align: center;

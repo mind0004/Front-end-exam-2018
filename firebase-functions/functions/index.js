@@ -183,3 +183,18 @@ exports.newDonation = functions.firestore
     console.log("NEW DONATION: ", donation);
     return handleOverview(donation);
   });
+
+
+  let person = {
+    [b]: "Mindaugas",
+    age: 15,
+    sex: "Verryyy active boii",
+    b: "dsadasd",
+  }
+
+ let b = "name";
+
+ person[b]
+ person.name
+
+ person.b

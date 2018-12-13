@@ -737,234 +737,270 @@ a {
     #index footer .login {
       bottom: 40px; } }
 
-#step-1 .background {
+#step-1 {
   width: 100vw;
   max-width: 100%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: -100; }
-
-#step-1 .donate-grid {
-  display: grid;
-  grid-gap: 50px 100px;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 10px; }
-  #step-1 .donate-grid .card {
-    z-index: 20;
-    height: 80vh;
-    width: 25vw;
-    background-color: white;
-    display: block;
-    justify-self: center;
-    /* strong {
-        font-size: 1.4em;
-      } */ }
-    #step-1 .donate-grid .card p {
-      font-size: 1.4em; }
-    #step-1 .donate-grid .card h2 {
-      font-size: 2em; }
-    #step-1 .donate-grid .card .donate-header {
-      margin-left: vw;
-      margin-top: 0.4vh; }
-    #step-1 .donate-grid .card #recentdonors h2 {
-      border-bottom: 1px solid black;
-      margin-bottom: 2vh;
-      border-collapse: separate;
-      border-spacing: 15px 50px;
-      margin-left: 0.4vw;
-      margin-top: 0.4vh; }
-    #step-1 .donate-grid .card .recentdonors-grid {
-      margin-bottom: 3vw;
-      display: grid;
-      grid-template-columns: 70% 30%; }
-    #step-1 .donate-grid .card #topdonors h2 {
-      border-bottom: 1px solid black;
-      margin-bottom: 2vh;
-      border-collapse: separate;
-      border-spacing: 15px 50px; }
-    #step-1 .donate-grid .card .topdonors-grid {
-      margin-bottom: 3vw;
-      display: grid;
-      grid-template-columns: 70% 30%; }
-    #step-1 .donate-grid .card .card-content2 {
-      text-align: end; }
-    #step-1 .donate-grid .card #contentdiv {
-      height: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center; }
-      #step-1 .donate-grid .card #contentdiv #donatemoney {
-        text-align: center; }
-        #step-1 .donate-grid .card #contentdiv #donatemoney .slidecontainer p {
-          font-size: 4.2em;
-          margin-bottom: 20px; }
-        #step-1 .donate-grid .card #contentdiv #donatemoney .slidecontainer input {
-          width: 100%;
-          margin: 0; }
-        #step-1 .donate-grid .card #contentdiv #donatemoney .a-button {
-          margin: 0 auto;
-          font-size: 1.8em;
-          padding: 14px 23px;
-          border-radius: 50px; }
-  #step-1 .donate-grid p {
-    margin-bottom: 40px; }
-
-#step-1 .slidecontainer {
-  width: 100%; }
-
-#step-1 .slider {
-  -webkit-appearance: none;
-  height: 10px;
-  border-radius: 5px;
-  background: #00abd6;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s; }
-  #step-1 .slider input {
-    margin-top: 4vh; }
-
-#step-1 .slider:hover {
-  opacity: 1; }
-
-#step-1 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border: 1px solid black;
-  border-radius: 50%;
-  background: white;
-  cursor: pointer; }
-
-#step-1 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  cursor: pointer; }
-
-#step-1 .type {
-  margin: 5vh 0vw;
-  margin-top: 5vh; }
-  #step-1 .type input,
-  #step-1 .type p,
-  #step-1 .type .dropdown {
-    float: left;
-    padding: 0px 5px;
-    font-size: 16px; }
-  #step-1 .type .dropdown {
-    position: relative;
-    height: 20px;
+  position: relative;
+  min-height: 100vh; }
+  #step-1 .background {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
     overflow: hidden;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.3s; }
-    #step-1 .type .dropdown ul {
-      padding-right: 10px; }
-    #step-1 .type .dropdown li {
-      padding: 2px 2px 5px 2px;
-      transition: all 0.3s; }
-    #step-1 .type .dropdown li:hover {
-      background: lightblue; }
-    #step-1 .type .dropdown .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -100; }
+    #step-1 .background > div {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      max-width: 100%;
+      height: 100vh; }
+    #step-1 .background img {
+      height: 100vh;
       position: absolute;
-      top: 19px;
-      height: 1px;
-      width: 100%;
-      background: black; }
-    #step-1 .type .dropdown .arrow {
-      position: absolute;
-      right: 1px;
-      top: 2px;
-      border: solid black;
-      border-width: 0 1px 1px 0;
-      display: inline-block;
-      padding: 3px;
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg); }
-
-#step-2 .background {
-  width: 100vw;
-  max-width: 100%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: -100; }
-
-#step-2 #payment-grid {
-  display: grid;
-  grid-gap: 50px 100px;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 10px; }
-  #step-2 #payment-grid .card {
-    height: 60vh;
-    width: 20vw;
-    display: block;
-    justify-self: center; }
-    #step-2 #payment-grid .card p {
-      font-size: 1.2vw; }
-  #step-2 #payment-grid #subcheckbox {
-    color: #b6b6b6; }
-  #step-2 #payment-grid #monthyear-grid {
+      bottom: 0;
+      left: 0; }
+  #step-1 .donate-grid {
     display: grid;
-    grid-gap: 10px 100px;
+    grid-gap: 50px 100px;
     grid-template-columns: repeat(2, 1fr);
     padding: 10px; }
-  #step-2 #payment-grid #paypalbox #subcheckbox {
+    #step-1 .donate-grid .card {
+      z-index: 20;
+      height: 80vh;
+      width: 25vw;
+      background-color: white;
+      display: block;
+      justify-self: center;
+      /* strong {
+        font-size: 1.4em;
+      } */ }
+      #step-1 .donate-grid .card p {
+        font-size: 1.4em; }
+      #step-1 .donate-grid .card h2 {
+        font-size: 2em; }
+      #step-1 .donate-grid .card .donate-header {
+        margin-left: vw;
+        margin-top: 0.4vh; }
+      #step-1 .donate-grid .card #recentdonors h2 {
+        border-bottom: 1px solid black;
+        margin-bottom: 2vh;
+        border-collapse: separate;
+        border-spacing: 15px 50px;
+        margin-left: 0.4vw;
+        margin-top: 0.4vh; }
+      #step-1 .donate-grid .card .recentdonors-grid {
+        margin-bottom: 3vw;
+        display: grid;
+        grid-template-columns: 70% 30%; }
+      #step-1 .donate-grid .card #topdonors h2 {
+        border-bottom: 1px solid black;
+        margin-bottom: 2vh;
+        border-collapse: separate;
+        border-spacing: 15px 50px; }
+      #step-1 .donate-grid .card .topdonors-grid {
+        margin-bottom: 3vw;
+        display: grid;
+        grid-template-columns: 70% 30%; }
+      #step-1 .donate-grid .card .card-content2 {
+        text-align: end; }
+      #step-1 .donate-grid .card #contentdiv {
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center; }
+        #step-1 .donate-grid .card #contentdiv #donatemoney {
+          text-align: center; }
+          #step-1 .donate-grid .card #contentdiv #donatemoney .slidecontainer p {
+            font-size: 4.2em;
+            margin-bottom: 20px; }
+          #step-1 .donate-grid .card #contentdiv #donatemoney .slidecontainer input {
+            width: 100%;
+            margin: 0; }
+          #step-1 .donate-grid .card #contentdiv #donatemoney .a-button {
+            margin: 0 auto;
+            font-size: 1.8em;
+            padding: 14px 23px;
+            border-radius: 50px; }
+    #step-1 .donate-grid p {
+      margin-bottom: 40px; }
+  #step-1 .slidecontainer {
+    width: 100%; }
+  #step-1 .slider {
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    background: #00abd6;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s; }
+    #step-1 .slider input {
+      margin-top: 4vh; }
+  #step-1 .slider:hover {
+    opacity: 1; }
+  #step-1 .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer; }
+  #step-1 .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer; }
+  #step-1 .type {
+    margin: 5vh 0vw;
     margin-top: 5vh; }
+    #step-1 .type input,
+    #step-1 .type p,
+    #step-1 .type .dropdown {
+      float: left;
+      padding: 0px 5px;
+      font-size: 16px; }
+    #step-1 .type .dropdown {
+      position: relative;
+      height: 20px;
+      overflow: hidden;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.3s; }
+      #step-1 .type .dropdown ul {
+        padding-right: 10px; }
+      #step-1 .type .dropdown li {
+        padding: 2px 2px 5px 2px;
+        transition: all 0.3s; }
+      #step-1 .type .dropdown li:hover {
+        background: lightblue; }
+      #step-1 .type .dropdown .line {
+        position: absolute;
+        top: 19px;
+        height: 1px;
+        width: 100%;
+        background: black; }
+      #step-1 .type .dropdown .arrow {
+        position: absolute;
+        right: 1px;
+        top: 2px;
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg); }
 
-#step-2 #end {
-  margin: 0 auto;
-  text-align: center; }
-
-#step-2 .a-button {
-  margin-bottom: 1vh; }
-
-#step-3 .background {
+#step-2 {
   width: 100vw;
   max-width: 100%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: -100; }
+  position: relative;
+  min-height: 100vh; }
+  #step-2 .background {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -100; }
+    #step-2 .background > div {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      max-width: 100%;
+      height: 100vh; }
+    #step-2 .background img {
+      height: 100vh;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+  #step-2 #payment-grid {
+    display: grid;
+    grid-gap: 50px 100px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px; }
+    #step-2 #payment-grid .card {
+      height: 60vh;
+      width: 20vw;
+      display: block;
+      justify-self: center; }
+      #step-2 #payment-grid .card p {
+        font-size: 1.2vw; }
+    #step-2 #payment-grid #subcheckbox {
+      color: #b6b6b6; }
+    #step-2 #payment-grid #monthyear-grid {
+      display: grid;
+      grid-gap: 10px 100px;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px; }
+    #step-2 #payment-grid #paypalbox #subcheckbox {
+      margin-top: 5vh; }
+  #step-2 #end {
+    margin: 0 auto;
+    text-align: center; }
+  #step-2 .a-button {
+    margin-bottom: 1vh; }
 
-#step-3 #backtopoly {
-  text-align: center;
-  margin-top: 2vh; }
-
-#step-3 .card {
-  margin: 0 auto;
-  text-align: center;
-  width: 70vw; }
-  #step-3 .card p {
+#step-3 {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  min-height: 100vh; }
+  #step-3 .background {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -100; }
+    #step-3 .background > div {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      max-width: 100%;
+      height: 100vh; }
+    #step-3 .background img {
+      height: 100vh;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+  #step-3 #backtopoly {
+    text-align: center;
+    margin-top: 2vh; }
+  #step-3 .card {
     margin: 0 auto;
     text-align: center;
-    font-size: 1.5vw;
-    max-width: 40vw; }
-  #step-3 .card #step-3-header {
-    font-size: 6vw; }
-  #step-3 .card #thankyoutext {
-    margin-bottom: 2vh; }
-  #step-3 .card #uptodate {
-    margin-top: 2vh;
-    margin-bottom: 1.5vh; }
-  #step-3 .card .input-field {
-    margin: 0 auto; }
-  #step-3 .card .a-button {
-    margin-top: 1.8vh; }
-  #step-3 .card img {
-    width: 15%; }
+    width: 70vw; }
+    #step-3 .card p {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.5vw;
+      max-width: 40vw; }
+    #step-3 .card #step-3-header {
+      font-size: 6vw; }
+    #step-3 .card #thankyoutext {
+      margin-bottom: 2vh; }
+    #step-3 .card #uptodate {
+      margin-top: 2vh;
+      margin-bottom: 1.5vh; }
+    #step-3 .card .input-field {
+      margin: 0 auto; }
+    #step-3 .card .a-button {
+      margin-top: 1.8vh; }
+    #step-3 .card img {
+      width: 15%; }
 
 /* ==========================================================================
    SECOND APPROACH - DESKTOP FIRST
@@ -987,163 +1023,160 @@ a {
   #step-1 .donate-grid .card h2 {
     font-size: 1.4em; } }
 
-#research-contact main {
+#research-contact main .background {
   width: 100vw;
   max-width: 100%;
-  position: relative;
-  min-height: 100vh; }
-  #research-contact main .background {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -100; }
+  #research-contact main .background > div {
+    position: relative;
     bottom: 0;
     left: 0;
-    z-index: -100; }
-    #research-contact main .background > div {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      max-width: 100%;
-      height: 100vh; }
-    #research-contact main .background img {
-      height: 100vh;
-      position: absolute;
-      bottom: 0;
-      left: 0; }
-  #research-contact main .card {
-    background: white;
-    width: 86vw;
-    height: 80vh;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh; }
+  #research-contact main .background img {
+    height: 100vh;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    margin: auto;
-    padding: 20px; }
-    #research-contact main .card header {
-      text-align: center; }
-      #research-contact main .card header h2 {
-        font-size: 30px;
-        margin-bottom: 20px; }
-      #research-contact main .card header p {
-        line-height: 25px; }
-    #research-contact main .card .contact-form {
-      height: 60vh;
-      width: 100%;
-      display: flex;
-      /* establish flex container */
-      flex-direction: column;
-      /* make main axis vertical */
-      justify-content: center;
-      /* center items vertically, in this case */
-      align-items: center; }
-    #research-contact main .card form {
+    bottom: 0;
+    left: 0; }
+
+#research-contact main .card {
+  background: white;
+  width: 86vw;
+  height: 80vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+  padding: 20px;
+  z-index: 10; }
+  #research-contact main .card header {
+    text-align: center; }
+    #research-contact main .card header h2 {
+      font-size: 30px;
+      margin-bottom: 20px; }
+    #research-contact main .card header p {
+      line-height: 25px; }
+  #research-contact main .card .contact-form {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    /* establish flex container */
+    flex-direction: column;
+    /* make main axis vertical */
+    justify-content: center;
+    /* center items vertically, in this case */
+    align-items: center; }
+  #research-contact main .card form {
+    width: 400px;
+    margin: 0 auto;
+    position: relative; }
+    #research-contact main .card form .input-field {
       width: 400px;
-      margin: 0 auto;
-      position: relative; }
-      #research-contact main .card form .input-field {
-        width: 400px;
-        margin-top: 13px; }
-      #research-contact main .card form .text-area {
-        width: 400px;
-        margin-top: 4px; }
-        #research-contact main .card form .text-area textarea {
-          min-width: 400px; }
-      #research-contact main .card form .submit {
-        text-align: center; }
-        #research-contact main .card form .submit .loading-icon {
-          display: none; }
-        #research-contact main .card form .submit.move-up {
-          display: inline;
-          position: absolute;
-          transform: translateY(-100px);
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          z-index: 55;
-          transition: all 0.3s; }
-          #research-contact main .card form .submit.move-up input {
-            position: absolute;
-            color: rgba(0, 0, 0, 0);
-            border-radius: 50%;
-            padding: 0px;
-            margin-top: 0px;
-            height: 60px;
-            width: 60px;
-            transition: all 0.3s; }
-          #research-contact main .card form .submit.move-up .container {
-            height: 60px;
-            width: 60px;
-            display: inline-block;
-            position: relative;
-            top: 0px;
-            left: 0px; }
-            #research-contact main .card form .submit.move-up .container .loading-icon {
-              display: inline-block;
-              position: absolute;
-              top: 0px;
-              left: 0px;
-              right: 0px;
-              bottom: 0px;
-              margin: auto;
-              height: 10px;
-              width: 10px;
-              background: white;
-              border-radius: 50%;
-              animation: loadingAnimation 3s ease-in-out infinite;
-              z-index: 100;
-              opacity: 1;
-              transition: all 0.3s; }
-            #research-contact main .card form .submit.move-up .container .check {
-              opacity: 0;
-              transition: all 0.3s;
-              display: inline-block;
-              width: 4px;
-              height: 32px;
-              background: white;
-              position: absolute;
-              top: 0px;
-              left: 0px;
-              right: 0px;
-              bottom: 0px;
-              margin: auto;
-              transform: rotate(32deg);
-              top: 0px;
-              left: 11px;
-              transition: all 0.3s; }
-            #research-contact main .card form .submit.move-up .container .check:last-of-type {
-              height: 15px;
-              transform: rotate(-35deg);
-              top: 8px;
-              left: -15px; }
-            #research-contact main .card form .submit.move-up .container.send .loading-icon {
-              opacity: 0; }
-            #research-contact main .card form .submit.move-up .container.send .check {
-              opacity: 1; }
-      #research-contact main .card form .checking {
-        position: absolute;
-        height: 110%;
-        width: 110%;
-        background: white;
-        top: 0px;
-        left: 0px;
-        z-index: 50;
+      margin-top: 13px; }
+    #research-contact main .card form .text-area {
+      width: 400px;
+      margin-top: 4px; }
+      #research-contact main .card form .text-area textarea {
+        min-width: 400px; }
+    #research-contact main .card form .submit {
+      text-align: center; }
+      #research-contact main .card form .submit .loading-icon {
         display: none; }
-        #research-contact main .card form .checking.active {
-          display: block; }
-        #research-contact main .card form .checking h3 {
-          opacity: 0;
+      #research-contact main .card form .submit.move-up {
+        display: inline;
+        position: absolute;
+        transform: translateY(-100px);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 55;
+        transition: all 0.3s; }
+        #research-contact main .card form .submit.move-up input {
+          position: absolute;
+          color: rgba(0, 0, 0, 0);
+          border-radius: 50%;
+          padding: 0px;
+          margin-top: 0px;
+          height: 60px;
+          width: 60px;
           transition: all 0.3s; }
-        #research-contact main .card form .checking.send h3 {
-          margin-top: 50px;
-          opacity: 1;
-          font-size: 30px;
-          text-align: center;
-          line-height: 50px; }
+        #research-contact main .card form .submit.move-up .container {
+          height: 60px;
+          width: 60px;
+          display: inline-block;
+          position: relative;
+          top: 0px;
+          left: 0px; }
+          #research-contact main .card form .submit.move-up .container .loading-icon {
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            height: 10px;
+            width: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: loadingAnimation 3s ease-in-out infinite;
+            z-index: 100;
+            opacity: 1;
+            transition: all 0.3s; }
+          #research-contact main .card form .submit.move-up .container .check {
+            opacity: 0;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 4px;
+            height: 32px;
+            background: white;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            transform: rotate(32deg);
+            top: 0px;
+            left: 11px;
+            transition: all 0.3s; }
+          #research-contact main .card form .submit.move-up .container .check:last-of-type {
+            height: 15px;
+            transform: rotate(-35deg);
+            top: 8px;
+            left: -15px; }
+          #research-contact main .card form .submit.move-up .container.send .loading-icon {
+            opacity: 0; }
+          #research-contact main .card form .submit.move-up .container.send .check {
+            opacity: 1; }
+    #research-contact main .card form .checking {
+      position: absolute;
+      height: 110%;
+      width: 110%;
+      background: white;
+      top: 0px;
+      left: 0px;
+      z-index: 50;
+      display: none; }
+      #research-contact main .card form .checking.active {
+        display: block; }
+      #research-contact main .card form .checking h3 {
+        opacity: 0;
+        transition: all 0.3s; }
+      #research-contact main .card form .checking.send h3 {
+        margin-top: 50px;
+        opacity: 1;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px; }
 
 #research-contact .go-back {
   position: absolute;
