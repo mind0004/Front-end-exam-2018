@@ -5,6 +5,8 @@ import Overview from "./Overview";
 import Donations from "./Donations";
 import Messages from "./Messages";
 import { connect } from "react-redux";
+import IsAuthUser from "../hoc/IsAuthUser";
+import { compose } from "redux";
 
 class Dashboard extends Component {
   state = {
@@ -21,30 +23,28 @@ class Dashboard extends Component {
     });
   };
   render() {
-    const isUserVerified = this.props.auth.uid ? (
-      <div id="dashboard">
-        <Navbar
-          showMobileMenu={this.state.showMobileMenu}
-          toggleMobileMenu={this.toggleMobileMenu}
-        />
-        <div
-          id="dashboard-components"
-          className={this.state.showMobileMenu ? "mobile-menu-active" : ""}
-        >
-          <div className="main-content">
-            <Switch>
-              <Route exact path="/dashboard/" component={Overview} />
-              <Route path="/dashboard/donations" component={Donations} />
-              <Route path="/dashboard/messages" component={Messages} />
-            </Switch>
+    return (
+      <BrowserRouter>
+        <div id="dashboard">
+          <Navbar
+            showMobileMenu={this.state.showMobileMenu}
+            toggleMobileMenu={this.toggleMobileMenu}
+          />
+          <div
+            id="dashboard-components"
+            className={this.state.showMobileMenu ? "mobile-menu-active" : ""}
+          >
+            <div className="main-content">
+              <Switch>
+                <Route exact path="/dashboard/" component={Overview} />
+                <Route path="/dashboard/donations" component={Donations} />
+                <Route path="/dashboard/messages" component={Messages} />
+              </Switch>
+            </div>
           </div>
         </div>
-      </div>
-    ) : (
-      <Redirect to="/" />
+      </BrowserRouter>
     );
-
-    return <BrowserRouter>{isUserVerified}</BrowserRouter>;
   }
 }
 
@@ -55,4 +55,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+  connect(mapStateToProps),
+  IsAuthUser
+)(Dashboard);
