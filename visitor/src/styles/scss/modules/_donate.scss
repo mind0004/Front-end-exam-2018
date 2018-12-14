@@ -7,9 +7,11 @@
   position: relative;
   min-height: 100vh;
 
+  #back-to-poly {
+  }
+
   .go-back {
     font-size: 20px;
-    background: black;
   }
 
   .background {
@@ -68,7 +70,6 @@
       }
 
       .donate-header {
-        margin-left: vw;
         margin-top: 0.4vh;
       }
 
@@ -346,7 +347,19 @@
   max-width: 100%;
   position: relative;
   min-height: 100vh;
+
+  .go-back {
+    font-size: 20px;
+    margin-top: 3vh;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+  }
   .background {
+    #whole-background-img {
+      display: none;
+    }
+
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -378,18 +391,20 @@
   .card {
     margin: 0 auto;
     text-align: center;
+    background: white;
+    margin-bottom: 3vh;
 
     width: 70vw;
 
     p {
       margin: 0 auto;
       text-align: center;
-      font-size: 1.5vw;
-      max-width: 40vw;
+      font-size: 1.3em;
+      max-width: 30vw;
     }
 
     #step-3-header {
-      font-size: 6vw;
+      font-size: 3em;
     }
 
     #thankyoutext {
@@ -403,10 +418,14 @@
 
     .input-field {
       margin: 0 auto;
+      margin-bottom: 2vh;
     }
 
     .a-button {
-      margin-top: 1.8vh;
+      margin: 0 auto;
+      font-size: 1.6em;
+      padding: 14px 23px;
+      border-radius: 50px;
     }
 
     img {
@@ -456,8 +475,8 @@
   #step-1 {
     .go-back {
       margin: 0 auto;
-      //display: block;
       text-align: center;
+      display: block;
     }
     .background {
       #whole-background-img {
@@ -480,6 +499,12 @@
   }
 
   #step-2 {
+    .go-back {
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+    }
+
     .background {
       #whole-background-img {
         display: block;
@@ -496,6 +521,36 @@
         h2 {
           font-size: 2em;
         }
+      }
+    }
+  }
+
+  #step-3 {
+    .background {
+      #whole-background-img {
+        display: block;
+      }
+
+      #half-background-img {
+        display: none;
+      }
+    }
+    .card {
+      height: 70vh;
+      p {
+        max-width: 69vw;
+      }
+
+      img {
+        width: 45%;
+      }
+
+      .input-field {
+        margin-bottom: 3vh;
+      }
+
+      .a-button {
+        font-size: 1.2em;
       }
     }
   }

@@ -743,8 +743,7 @@ a {
   position: relative;
   min-height: 100vh; }
   #step-1 .go-back {
-    font-size: 20px;
-    background: black; }
+    font-size: 20px; }
   #step-1 .background {
     width: 100vw;
     max-width: 100%;
@@ -788,7 +787,6 @@ a {
       #step-1 .donate-grid .card h2 {
         font-size: 2em; }
       #step-1 .donate-grid .card .donate-header {
-        margin-left: vw;
         margin-top: 0.4vh; }
       #step-1 .donate-grid .card #recentdonors h2 {
         border-bottom: 1px solid black;
@@ -976,6 +974,12 @@ a {
   max-width: 100%;
   position: relative;
   min-height: 100vh; }
+  #step-3 .go-back {
+    font-size: 20px;
+    margin-top: 3vh;
+    margin: 0 auto;
+    text-align: center;
+    display: block; }
   #step-3 .background {
     width: 100vw;
     max-width: 100%;
@@ -985,6 +989,8 @@ a {
     bottom: 0;
     left: 0;
     z-index: -100; }
+    #step-3 .background #whole-background-img {
+      display: none; }
     #step-3 .background > div {
       position: relative;
       bottom: 0;
@@ -1003,23 +1009,29 @@ a {
   #step-3 .card {
     margin: 0 auto;
     text-align: center;
+    background: white;
+    margin-bottom: 3vh;
     width: 70vw; }
     #step-3 .card p {
       margin: 0 auto;
       text-align: center;
-      font-size: 1.5vw;
-      max-width: 40vw; }
+      font-size: 1.3em;
+      max-width: 30vw; }
     #step-3 .card #step-3-header {
-      font-size: 6vw; }
+      font-size: 3em; }
     #step-3 .card #thankyoutext {
       margin-bottom: 2vh; }
     #step-3 .card #uptodate {
       margin-top: 2vh;
       margin-bottom: 1.5vh; }
     #step-3 .card .input-field {
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 2vh; }
     #step-3 .card .a-button {
-      margin-top: 1.8vh; }
+      margin: 0 auto;
+      font-size: 1.6em;
+      padding: 14px 23px;
+      border-radius: 50px; }
     #step-3 .card img {
       width: 15%; }
 
@@ -1039,7 +1051,8 @@ a {
 @media (max-width: 767px) {
   #step-1 .go-back {
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    display: block; }
   #step-1 .background #whole-background-img {
     display: block; }
   #step-1 .background #half-background-img {
@@ -1050,6 +1063,10 @@ a {
       width: 70vw; }
       #step-1 .donate-grid .card h2 {
         font-size: 2em; }
+  #step-2 .go-back {
+    margin: 0 auto;
+    text-align: center;
+    display: block; }
   #step-2 .background #whole-background-img {
     display: block; }
   #step-2 .background #half-background-img {
@@ -1059,7 +1076,21 @@ a {
     #step-2 #payment-grid .card {
       width: 70vw; }
       #step-2 #payment-grid .card h2 {
-        font-size: 2em; } }
+        font-size: 2em; }
+  #step-3 .background #whole-background-img {
+    display: block; }
+  #step-3 .background #half-background-img {
+    display: none; }
+  #step-3 .card {
+    height: 70vh; }
+    #step-3 .card p {
+      max-width: 69vw; }
+    #step-3 .card img {
+      width: 45%; }
+    #step-3 .card .input-field {
+      margin-bottom: 3vh; }
+    #step-3 .card .a-button {
+      font-size: 1.2em; } }
 
 @media (max-width: 575px) {
   #step-1 .donate-grid .card h2 {
