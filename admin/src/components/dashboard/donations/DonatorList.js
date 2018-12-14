@@ -79,5 +79,7 @@ const mapStateToProps = (state, ownProps) => {
 
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: "donations" }])
+  firestoreConnect([
+    { collection: "donations", orderBy: ["timestamp", "desc"] }
+  ])
 )(DonatorList);

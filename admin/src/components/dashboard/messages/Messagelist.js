@@ -78,5 +78,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: "messages" }])
+  firestoreConnect([{ collection: "messages", orderBy: ["timestamp", "desc"] }])
 )(MessageList);

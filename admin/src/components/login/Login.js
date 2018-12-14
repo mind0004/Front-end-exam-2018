@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Background from "../../assets/img/background-line-grey-half.svg";
+import DisableRouteForAuthUser from "../hoc/DisableRouteForAuthUser";
 import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
 import { signIn } from "../../store/actions/authAction";
+import { compose } from "redux";
 
 class Login extends Component {
   state = {
@@ -110,7 +112,10 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  DisableRouteForAuthUser
 )(Login);

@@ -38,7 +38,7 @@ class Navbar extends Component {
           <nav>
             <ul>
               <li>
-                <NavLink exact to="/dashboard/">
+                <NavLink exact to="/dashboard/" activeClassName="active">
                   Overview
                   <div className="active-background">
                     <div />
@@ -46,7 +46,7 @@ class Navbar extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/donations">
+                <NavLink to="/dashboard/donations" activeClassName="active">
                   Donations
                   <div className="active-background">
                     <div />
@@ -54,7 +54,7 @@ class Navbar extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/messages">
+                <NavLink to="/dashboard/messages" activeClassName="active">
                   Messages
                   <div className="active-background">
                     <div />
@@ -86,5 +86,9 @@ const mapDispatchToProps = dispatch => {
 
 export default connect(
   null,
-  mapDispatchToProps //only need this
+  mapDispatchToProps,
+  undefined,
+  { pure: false }
 )(Navbar);
+
+//missing own props or what?
