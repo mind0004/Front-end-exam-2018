@@ -12,13 +12,19 @@
     <link href="../styles/main.css" rel="stylesheet" type="text/css" />
   </head>
   <body id="step-2">
-    <h2 id="backtopoly">&lt; back to PolyEco</h2>
+    <p><a href="../index.html" class="go-back">&lt; return to Polyeco</a></p>
     <div id="step2pic">Picture here</div>
     <div class="background">
       <div>
         <img
+          id="half-background-img"
           src="../assets/img/background-line-blue-half.svg"
           alt="background shape"
+        />
+        <img
+          id="whole-background-img"
+          src="../assets/img/background-line-blue.svg"
+          alt="background whole shape"
         />
       </div>
     </div>
@@ -143,16 +149,15 @@
               Paypal<br />
             </div>
           -->
+
+          <button type="submit" form="paymentForm" class="a-button step2Button">
+            Proceed
+          </button>
         </form>
       </div>
     </div>
 
-    <div id="end">
-      <button type="submit" form="paymentForm" class="a-button step2Button">
-        Proceed
-      </button>
-      <h2 id="backtopoly">&lt; step back</h2>
-    </div>
+    <div id="end"><a href="step-1.html" class="go-back">&lt; step back</a></div>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="../scripts/vendors/moment.min.js"></script>

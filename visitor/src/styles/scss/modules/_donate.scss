@@ -7,7 +7,15 @@
   position: relative;
   min-height: 100vh;
 
+  .go-back {
+    font-size: 20px;
+    background: black;
+  }
+
   .background {
+    #whole-background-img {
+      display: none;
+    }
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -237,7 +245,15 @@
   max-width: 100%;
   position: relative;
   min-height: 100vh;
+
+  .go-back {
+    font-size: 20px;
+  }
+
   .background {
+    #whole-background-img {
+      display: none;
+    }
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -270,7 +286,7 @@
 
     .card {
       p {
-        font-size: 1.2vw;
+        font-size: 1.2em;
       }
 
       h2 {
@@ -314,8 +330,10 @@
   }
 
   .a-button {
+    display: block;
     margin: 0 auto;
-    margin-bottom: 1.5vh;
+    text-align: center;
+    margin-top: 6vh;
     font-size: 1.8em;
     padding: 14px 23px;
     border-radius: 50px;
@@ -436,10 +454,24 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
   #step-1 {
+    .go-back {
+      margin: 0 auto;
+      //display: block;
+      text-align: center;
+    }
+    .background {
+      #whole-background-img {
+        display: block;
+      }
+
+      #half-background-img {
+        display: none;
+      }
+    }
     .donate-grid {
       grid-template-columns: repeat(1, 1fr);
       .card {
-        width: 50vw;
+        width: 70vw;
         h2 {
           font-size: 2em;
         }
@@ -448,10 +480,19 @@
   }
 
   #step-2 {
+    .background {
+      #whole-background-img {
+        display: block;
+      }
+
+      #half-background-img {
+        display: none;
+      }
+    }
     #payment-grid {
       grid-template-columns: repeat(1, 1fr);
       .card {
-        width: 50vw;
+        width: 70vw;
         h2 {
           font-size: 2em;
         }

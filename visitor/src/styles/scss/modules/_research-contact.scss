@@ -1,4 +1,5 @@
 #research-contact {
+  position: initial;
   main {
     .background {
       width: 100vw;
@@ -9,6 +10,11 @@
       bottom: 0;
       left: 0;
       z-index: -100;
+
+      #whole-background-img {
+        display: none;
+      }
+
       > div {
         position: relative;
         bottom: 0;
@@ -231,6 +237,15 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
   #research-contact {
+    .background {
+      #half-background-img {
+        display: none;
+      }
+
+      #whole-background-img {
+        display: block;
+      }
+    }
   }
 }
 
@@ -243,6 +258,7 @@
       .card {
         margin-top: 5px;
         bottom: auto;
+        width: 80vw;
         height: 100vh;
         header {
           h2 {
