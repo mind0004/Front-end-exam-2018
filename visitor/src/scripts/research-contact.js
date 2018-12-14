@@ -60,6 +60,7 @@ const emailInput = document.querySelector(
 const messageInput = document.querySelector("#research-contact textarea");
 
 function createNewMessage(e) {
+  const timestamp = +new Date();
   e.preventDefault();
   db.collection("messages")
     .add({
@@ -69,7 +70,8 @@ function createNewMessage(e) {
       institute: instituteInput.value,
       name: nameInput.value,
       email: emailInput.value,
-      message: messageInput.value
+      message: messageInput.value,
+      timestamp: timestamp
     })
     .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
