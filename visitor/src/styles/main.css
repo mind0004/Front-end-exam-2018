@@ -1074,7 +1074,7 @@ a {
     max-width: 100%;
     height: 100vh;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     z-index: -100; }
@@ -1248,44 +1248,42 @@ a {
     display: block; } }
 
 @media (max-width: 575px) {
-  #research-contact main {
-    min-height: 120vh; }
-    #research-contact main .card {
-      margin-top: 5px;
-      bottom: auto;
-      width: 80vw;
-      height: 100vh; }
-      #research-contact main .card header h2 {
-        font-size: 24px;
-        margin-bottom: 20px; }
-      #research-contact main .card header p {
-        line-height: 19px; }
-      #research-contact main .card form {
+  #research-contact main .card {
+    margin-top: 5px;
+    bottom: auto;
+    width: 80vw;
+    height: auto; }
+    #research-contact main .card header h2 {
+      font-size: 24px;
+      margin-bottom: 20px; }
+    #research-contact main .card header p {
+      line-height: 19px; }
+    #research-contact main .card form {
+      width: 270px;
+      margin: 0 auto;
+      position: relative; }
+      #research-contact main .card form .input-field {
         width: 270px;
-        margin: 0 auto;
-        position: relative; }
-        #research-contact main .card form .input-field {
-          width: 270px;
-          margin-top: 13px; }
-        #research-contact main .card form .text-area {
-          width: 270px;
-          margin-top: 4px; }
-          #research-contact main .card form .text-area textarea {
-            min-width: 270px;
-            max-width: 270px; }
-        #research-contact main .card form .submit-button {
-          margin-top: 30px; }
-        #research-contact main .card form .checking {
-          position: absolute;
-          height: 110%;
-          width: 110%;
-          background: white;
-          top: 0px;
-          left: -5%;
-          z-index: 50;
-          display: none; }
-          #research-contact main .card form .checking h3 {
-            font-size: 25px; } }
+        margin-top: 13px; }
+      #research-contact main .card form .text-area {
+        width: 270px;
+        margin-top: 4px; }
+        #research-contact main .card form .text-area textarea {
+          min-width: 270px;
+          max-width: 270px; }
+      #research-contact main .card form .submit-button {
+        margin-top: 30px; }
+      #research-contact main .card form .checking {
+        position: absolute;
+        height: 110%;
+        width: 110%;
+        background: white;
+        top: 0px;
+        left: -5%;
+        z-index: 50;
+        display: none; }
+        #research-contact main .card form .checking h3 {
+          font-size: 25px; } }
 
 strong {
   font-weight: 500; }

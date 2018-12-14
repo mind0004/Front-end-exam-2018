@@ -15,16 +15,13 @@
   <body id="research-contact">
     <main>
       <div class="background">
-        <img id="half-background-img"
-          src="../assets/img/background-line-blue-half.svg"
-          alt="background shape"
-        />
-        <img id="whole-background-img"
-        src="../assets/img/background-line-blue.svg"
-        alt="background whole shape">
+        <div>
+          <img
+            src="../assets/img/background-line-blue-half.svg"
+            alt="background shape"
+          />
         </div>
       </div>
-
       <!-- Card / box background -->
       <div class="card">
         <header>
@@ -74,6 +71,7 @@
                 <span class="check"></span> <span class="check"></span>
               </div>
             </div>
+            <p class="error-message"></p>
 
             <div class="checking">
               <h3>Thank you, we'll get back to you shortly!</h3>
@@ -85,6 +83,7 @@
       <a href="../index.html" class="go-back">&lt; return to Polyeco</a>
     </main>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="../scripts/vendors/validator.js"></script>
     <script src="../scripts/vendors/moment.min.js"></script>
     <script
       src="../scripts/research-contact.js"
