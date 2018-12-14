@@ -929,12 +929,18 @@ a {
     grid-template-columns: repeat(2, 1fr);
     padding: 10px; }
     #step-2 #payment-grid .card {
-      height: 60vh;
-      width: 20vw;
+      z-index: 20;
+      height: 70vh;
+      width: 25vw;
+      background-color: white;
       display: block;
       justify-self: center; }
       #step-2 #payment-grid .card p {
         font-size: 1.2vw; }
+      #step-2 #payment-grid .card h2 {
+        font-size: 2em; }
+      #step-2 #payment-grid .card input {
+        font-size: 1.6em; }
     #step-2 #payment-grid #subcheckbox {
       color: #b6b6b6; }
     #step-2 #payment-grid #monthyear-grid {
@@ -948,7 +954,11 @@ a {
     margin: 0 auto;
     text-align: center; }
   #step-2 .a-button {
-    margin-bottom: 1vh; }
+    margin: 0 auto;
+    margin-bottom: 1.5vh;
+    font-size: 1.8em;
+    padding: 14px 23px;
+    border-radius: 50px; }
 
 #step-3 {
   width: 100vw;
@@ -1009,6 +1019,10 @@ a {
   #step-1 .donate-grid .card {
     width: 35vw; }
     #step-1 .donate-grid .card h2 {
+      font-size: 1.6em; }
+  #step-2 #payment-grid .card {
+    width: 35vw; }
+    #step-2 #payment-grid .card h2 {
       font-size: 1.6em; } }
 
 @media (max-width: 767px) {
@@ -1017,10 +1031,18 @@ a {
     #step-1 .donate-grid .card {
       width: 50vw; }
       #step-1 .donate-grid .card h2 {
+        font-size: 2em; }
+  #step-2 #payment-grid {
+    grid-template-columns: repeat(1, 1fr); }
+    #step-2 #payment-grid .card {
+      width: 50vw; }
+      #step-2 #payment-grid .card h2 {
         font-size: 2em; } }
 
 @media (max-width: 575px) {
   #step-1 .donate-grid .card h2 {
+    font-size: 1.4em; }
+  #step-2 #payment-grid .card h2 {
     font-size: 1.4em; } }
 
 #research-contact main .background {

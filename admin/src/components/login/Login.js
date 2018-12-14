@@ -12,7 +12,7 @@ class Login extends Component {
   };
 
   handleSubmit = () => {
-    console.log(typeof this.state.email);
+    //console.log(typeof this.state.email);
 
     this.props.signIn(this.state);
   };
@@ -20,7 +20,7 @@ class Login extends Component {
   handleInputChange = e => {
     this.setState({
       [e.target.name]: e.target.value
-    })
+    });
   };
 
   handleInputChangeEmail = e => {

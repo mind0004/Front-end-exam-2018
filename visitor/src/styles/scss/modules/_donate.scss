@@ -273,8 +273,18 @@
         font-size: 1.2vw;
       }
 
-      height: 60vh;
-      width: 20vw;
+      h2 {
+        font-size: 2em;
+      }
+
+      input {
+        font-size: 1.6em;
+      }
+
+      z-index: 20;
+      height: 70vh;
+      width: 25vw;
+      background-color: white;
 
       display: block;
       justify-self: center;
@@ -304,7 +314,11 @@
   }
 
   .a-button {
-    margin-bottom: 1vh;
+    margin: 0 auto;
+    margin-bottom: 1.5vh;
+    font-size: 1.8em;
+    padding: 14px 23px;
+    border-radius: 50px;
   }
 }
 
@@ -406,6 +420,17 @@
       }
     }
   }
+
+  #step-2 {
+    #payment-grid {
+      .card {
+        width: 35vw;
+        h2 {
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -421,12 +446,34 @@
       }
     }
   }
+
+  #step-2 {
+    #payment-grid {
+      grid-template-columns: repeat(1, 1fr);
+      .card {
+        width: 50vw;
+        h2 {
+          font-size: 2em;
+        }
+      }
+    }
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
   #step-1 {
     .donate-grid {
+      .card {
+        h2 {
+          font-size: 1.4em;
+        }
+      }
+    }
+  }
+
+  #step-2 {
+    #payment-grid {
       .card {
         h2 {
           font-size: 1.4em;
