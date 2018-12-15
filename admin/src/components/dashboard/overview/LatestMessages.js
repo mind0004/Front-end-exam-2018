@@ -2,31 +2,29 @@ import React, { Component } from "react";
 
 class LatestMessages extends Component {
   render() {
+    const latestThreeMessages = this.props.messages ? (
+      this.props.messages.map((message, i) => {
+        if (i < 3) {
+          return (
+            <tr key={message.id}>
+              <th>{message.date}</th>
+              <th>{message.name}</th>
+              <th>{message.institute}</th>
+            </tr>
+          );
+        }
+      })
+    ) : (
+      <p>Loading</p>
+    );
+
     //console.log(this.props.messages);
     return (
       <div className="recurring-donations card">
         <h2>Latest messages</h2>
         <div className="card-content">
           <table>
-            <tbody>
-              <tr>
-                <th>{this.props.messages[0].date}</th>
-                <th>{this.props.messages[0].name}</th>
-                <th>{this.props.messages[0].institute}</th>
-              </tr>
-
-              <tr>
-                <th>{this.props.messages[1].date}</th>
-                <th>{this.props.messages[1].name}</th>
-                <th>{this.props.messages[1].institute}</th>
-              </tr>
-
-              <tr>
-                <th>{this.props.messages[2].date}</th>
-                <th>{this.props.messages[2].name}</th>
-                <th>{this.props.messages[2].institute}</th>
-              </tr>
-            </tbody>
+            <tbody>{latestThreeMessages}</tbody>
           </table>
         </div>
       </div>
