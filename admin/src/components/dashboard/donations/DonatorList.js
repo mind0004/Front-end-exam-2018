@@ -5,6 +5,10 @@ import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
 
 class DonatorList extends Component {
+  handleSearchChange = e => {
+    console.log(e.target.value);
+  };
+
   render() {
     console.log(this.props.donations);
     const allDonations = this.props.donations ? (
@@ -25,7 +29,12 @@ class DonatorList extends Component {
               <header>
                 <div className="search">
                   <div className="input-field">
-                    <input type="text" name="email" placeholder=" " />
+                    <input
+                      type="text"
+                      name="text"
+                      placeholder=" "
+                      onChange={this.handleSearchChange}
+                    />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       data-name="Layer 1"
