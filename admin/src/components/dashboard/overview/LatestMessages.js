@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class RecurringDonations extends Component {
+class LatestMessages extends Component {
   render() {
     //console.log(this.props.messages);
     return (
@@ -34,4 +34,4 @@ class RecurringDonations extends Component {
   }
 }
 
-export default RecurringDonations;
+export default LatestMessages;

@@ -1,12 +1,9 @@
-export const searchDonationsName = term => {
+export const searchByName = term => {
   return (dispatch, getState, { getFirestore }) => {
     // make async call to database
     const firestore = getFirestore();
 
-    //Access profile and uid using getState()
-    const profile = getState().firebase.profile;
-    const authorId = getState().firebase.auth.uid;
-    const searchNameResults = [];
+    let searchNameResults = [];
 
     firestore
       .collection("donations")
@@ -17,7 +14,7 @@ export const searchDonationsName = term => {
           console.log(doc.data());
           searchNameResults.push(doc.data());
         });
-        dispatch({ type: "SEARCH_NAME_SUCCESS" }, searchNameResults);
+        dispatch({ type: "SEARCH_NAME_SUCCESS", searchNameResults });
       })
       .catch(err => {
         dispatch({ type: "SEARCH_NAME_ERROR" }, err);
