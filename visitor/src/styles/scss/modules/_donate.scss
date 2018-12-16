@@ -7,6 +7,62 @@
   position: relative;
   min-height: 100vh;
 
+  .steps-counter {
+    margin: 30px;
+    .container {
+      position: relative;
+      width: 50vw;
+      height: 30px;
+      margin: 0 auto;
+
+      .line {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background: #9c9c9c;
+        top: 25px;
+      }
+
+      .step {
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid #9c9c9c;
+        text-align: center;
+        background: white;
+        cursor: pointer;
+        a {
+          display: inline-block;
+          line-height: 50px;
+          color: $black;
+          height: 50px;
+          width: 50px;
+
+          font-size: 1.8em;
+        }
+      }
+      .step:nth-of-type(3) {
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+      }
+      .step:last-of-type {
+        right: -10px;
+        left: auto;
+      }
+
+      .step.active {
+        background: $blue;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
   .go-back {
     font-size: 20px;
   }
@@ -47,7 +103,7 @@
 
     .card {
       z-index: 20;
-      height: 80vh;
+      height: 70vh;
       width: 25vw;
       background-color: white;
 
@@ -244,6 +300,62 @@
   position: relative;
   min-height: 100vh;
 
+  .steps-counter {
+    margin: 30px;
+    .container {
+      position: relative;
+      width: 50vw;
+      height: 30px;
+      margin: 0 auto;
+
+      .line {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background: #9c9c9c;
+        top: 25px;
+      }
+
+      .step {
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid #9c9c9c;
+        text-align: center;
+        background: white;
+        cursor: pointer;
+        a {
+          display: inline-block;
+          line-height: 50px;
+          color: $black;
+          height: 50px;
+          width: 50px;
+
+          font-size: 1.8em;
+        }
+      }
+      .step:nth-of-type(3) {
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+      }
+      .step:last-of-type {
+        right: -10px;
+        left: auto;
+      }
+
+      .step.active {
+        background: $blue;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
   .go-back {
     font-size: 20px;
   }
@@ -336,7 +448,7 @@
     margin: 0 auto;
     text-align: center;
     margin-top: 2vh;
-    margin-bottom: 2svh;
+    margin-bottom: 2vh;
     font-size: 1.8em;
     padding: 14px 23px;
     border-radius: 50px;
@@ -356,6 +468,62 @@
   position: relative;
   min-height: 100vh;
 
+  .steps-counter {
+    padding: 50px 0px 40px 0px;
+    .container {
+      position: relative;
+      width: 50vw;
+      height: 30px;
+      margin: 0 auto;
+
+      .line {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background: #9c9c9c;
+        top: 25px;
+      }
+
+      .step {
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid #9c9c9c;
+        text-align: center;
+        background: white;
+        cursor: pointer;
+        a {
+          display: inline-block;
+          line-height: 50px;
+          color: $black;
+          height: 50px;
+          width: 50px;
+
+          font-size: 1.8em;
+        }
+      }
+      .step:nth-of-type(3) {
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+      }
+      .step:last-of-type {
+        right: -10px;
+        left: auto;
+      }
+
+      .step.active {
+        background: $blue;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
   .go-back {
     font-size: 20px;
     margin-top: 3vh;
@@ -363,11 +531,11 @@
     text-align: center;
     display: block;
   }
+
   .background {
     #whole-background-img {
       display: none;
     }
-
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -481,6 +649,12 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
   #step-1 {
+    .steps-counter {
+      .container {
+        width: 80vw;
+      }
+    }
+
     .go-back {
       margin: 0 auto;
       text-align: center;
@@ -499,6 +673,7 @@
       grid-template-columns: repeat(1, 1fr);
       .card {
         width: 70vw;
+        height: 70vh;
         h2 {
           font-size: 2em;
         }
@@ -507,6 +682,12 @@
   }
 
   #step-2 {
+    .steps-counter {
+      .container {
+        width: 80vw;
+      }
+    }
+
     .go-back {
       margin: 0 auto;
       text-align: center;
@@ -526,6 +707,7 @@
       grid-template-columns: repeat(1, 1fr);
       .card {
         width: 70vw;
+        height: 70vh;
         h2 {
           font-size: 2em;
         }
@@ -533,11 +715,18 @@
 
       #paymentCard {
         height: auto;
+        min-height: 70vh;
       }
     }
   }
 
   #step-3 {
+    .steps-counter {
+      .container {
+        width: 80vw;
+      }
+    }
+
     .background {
       #whole-background-img {
         display: block;
