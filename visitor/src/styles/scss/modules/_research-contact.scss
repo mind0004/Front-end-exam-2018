@@ -33,7 +33,7 @@
 
     .card {
       background: white;
-      width: 86vw;
+      width: 70vw;
       height: 80vh;
       position: absolute;
       top: 0px;
@@ -164,6 +164,14 @@
               }
             }
           }
+
+          .submit-button {
+            margin: 0 auto;
+            margin-top: 3vh;
+            font-size: 1.6em;
+            padding: 14px 23px;
+            border-radius: 50px;
+          }
         }
 
         .checking {
@@ -256,7 +264,7 @@
       .card {
         margin-top: 5px;
         bottom: auto;
-        width: 80vw;
+        width: 70vw;
         height: auto;
         header {
           h2 {
@@ -283,9 +291,7 @@
               max-width: 270px;
             }
           }
-          .submit-button {
-            margin-top: 30px;
-          }
+
           .checking {
             position: absolute;
             height: 110%;

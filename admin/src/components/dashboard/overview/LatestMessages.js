@@ -12,7 +12,7 @@ class LatestMessages extends Component {
             <th>{message.institute}</th>
           </tr>
         ) : (
-          <p>No messages available</p>
+          <p />
         );
       })
     ) : (
@@ -21,7 +21,7 @@ class LatestMessages extends Component {
 
     //console.log(this.props.messages);
     return (
-      <div className="recurring-donations card">
+      <div className="latest-messages card">
         <h2>Latest messages</h2>
         <div className="card-content">
           <table>

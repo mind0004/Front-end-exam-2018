@@ -570,6 +570,7 @@
     background: white;
     margin-bottom: 3vh;
 
+    height: auto;
     width: 70vw;
 
     p {
@@ -599,6 +600,8 @@
 
     .a-button {
       margin: 0 auto;
+      margin-bottom: 2vh;
+      margin-top: 2vh;
       font-size: 1.6em;
       padding: 14px 23px;
       border-radius: 50px;
