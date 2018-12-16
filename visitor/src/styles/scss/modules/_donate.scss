@@ -283,7 +283,7 @@
     padding: 10px;
 
     .card {
-      p {
+      input p {
         font-size: 1.2em;
       }
 
@@ -327,14 +327,25 @@
     text-align: center;
   }
 
-  .a-button {
+  .error-message {
+    font-size: 0.9em;
+  }
+
+  .submit {
     display: block;
     margin: 0 auto;
     text-align: center;
-    margin-top: 6vh;
+    margin-top: 2vh;
+    margin-bottom: 2svh;
     font-size: 1.8em;
     padding: 14px 23px;
     border-radius: 50px;
+
+    background: #00abd6;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
   }
 }
 
@@ -519,6 +530,10 @@
           font-size: 2em;
         }
       }
+
+      #paymentCard {
+        height: auto;
+      }
     }
   }
 
@@ -536,6 +551,11 @@
       height: 70vh;
       p {
         max-width: 69vw;
+        font-size: 1.2em;
+      }
+
+      #step-3-header {
+        font-size: 2.7em;
       }
 
       img {

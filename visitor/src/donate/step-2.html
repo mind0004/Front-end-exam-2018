@@ -39,7 +39,6 @@
             name="name"
             placeholder=" "
             form="paymentForm"
-            required
           />
           <label for="name-input">Name</label>
           <div class="underline"></div>
@@ -55,27 +54,25 @@
             name="email"
             placeholder=" "
             form="paymentForm"
-            required
           />
           <label for="email-input">Email</label>
           <div class="underline"></div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="paymentCard">
         <h2>Payment details</h2>
 
         <form name="myForm" id="paymentForm">
           <div class="input-field">
             <p>
               <input
-                id="cardnumber-input"
+                id="cardname-input"
                 type="text"
-                name="cardNumber"
+                name="cardname"
                 placeholder=" "
-                required
               />
-              <label for="cardnumber-input">Cardholder name</label>
+              <label for="cardname">Cardholder name</label>
             </p>
             <div class="underline"></div>
           </div>
@@ -83,13 +80,12 @@
           <div class="input-field">
             <p>
               <input
-                id="cardname-input"
+                id="cardnumber-input"
                 type="text"
-                name="name"
+                name="cardnumber"
                 placeholder=" "
-                required
               />
-              <label for="cardname-input">Card number</label>
+              <label for="cardnumber">Card number</label>
             </p>
             <div class="underline"></div>
           </div>
@@ -100,11 +96,10 @@
                 <input
                   id="cardmonth-input"
                   type="text"
-                  name="name"
+                  name="cardmonth"
                   placeholder=" "
-                  required
                 />
-                <label for="cardmonth-input">Month</label>
+                <label for="cardmonth">Month</label>
               </p>
               <div class="underline"></div>
             </div>
@@ -112,13 +107,12 @@
             <div class="input-field">
               <p>
                 <input
-                  id="cardyear-input"
+                  id="cardyear-inpupt"
                   type="text"
-                  name="name"
+                  name="cardyear"
                   placeholder=" "
-                  required
                 />
-                <label for="cardyear-input">Year</label>
+                <label for="cardyear">Year</label>
               </p>
               <div class="underline"></div>
             </div>
@@ -126,14 +120,8 @@
 
           <div class="input-field">
             <p>
-              <input
-                id="cvv-input"
-                type="text"
-                name="name"
-                placeholder=" "
-                required
-              />
-              <label for="cvv-input">CVV</label>
+              <input id="cvv-input" type="text" name="cvv" placeholder=" " />
+              <label for="cvv">CVV</label>
             </p>
             <div class="underline"></div>
           </div>
@@ -150,9 +138,17 @@
             </div>
           -->
 
-          <button type="submit" form="paymentForm" class="a-button step2Button">
+          <button
+            class="submit"
+            type="submit"
+            form="paymentForm"
+            style="display: block"
+          >
             Proceed
           </button>
+          <p class="error-message"></p>
+
+          <div class="checking"></div>
         </form>
       </div>
     </div>
@@ -160,6 +156,7 @@
     <div id="end"><a href="step-1.html" class="go-back">&lt; step back</a></div>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="../scripts/vendors/validator.js"></script>
     <script src="../scripts/vendors/moment.min.js"></script>
     <script src="../scripts/donate-2.js"></script>
   </body>
