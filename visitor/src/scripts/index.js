@@ -49,7 +49,7 @@ function init() {
    Functions
    ========================================================================== */
 
-//Draw chart
+//Draw initial chart, but dont populate yet
 function drawInitalChart() {
   console.log("drawcanvas");
   Chart.defaults.global.animation.duration = 3000; //Chart draw speed
@@ -138,6 +138,7 @@ function drawInitalChart() {
   });
 }
 
+//populate chart with data for visual drawing effects
 function updateChart() {
   console.log("update canvas");
 

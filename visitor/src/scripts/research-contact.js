@@ -48,7 +48,7 @@ function handleSubmitClick(e) {
   setTimeout(checkingForm, 1000);
 }
 
-//Checking for submit, display loading
+//Checking input fields for submit, display loading
 function checkingForm() {
   let inputsValid = true;
   let error = []; //Store all error masssges inside here
