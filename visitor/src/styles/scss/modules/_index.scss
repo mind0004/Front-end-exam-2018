@@ -9,11 +9,12 @@
       max-width: 1200px;
       height: 70px;
       margin: 0 auto;
-      h2 {
+      img {
         float: left;
-        font-size: 40px;
-        line-height: 100px;
-        margin-left: 20px;
+        max-width: 20%;
+        /* font-size: 40px;
+        line-height: 100px; */
+        margin: 30px 20px 20px 20px;
       }
       .a-button {
         float: right;
@@ -537,7 +538,6 @@
         max-content
       ); /* fit to each div size */
       grid-gap: 10px;
-
       > div {
         min-height: 280px;
         max-width: 90vw;
@@ -564,13 +564,11 @@
       margin: 0 auto;
       margin-top: 110px;
     }
-
     #newsletter .input-field {
       margin: 0 auto;
       margin-top: 10px;
       width: 85vw;
     }
-
     #index #featured img {
       width: 90vw;
     }
@@ -600,10 +598,9 @@
     }
   }
 }
-
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
   #index {
-    //write everything that applies to the index page inside here
+    // write everything that applies to the index page inside here
   }
 }
