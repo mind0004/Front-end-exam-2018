@@ -93,6 +93,8 @@ function checkingForm() {
     error.push("- CVV has to be 3 characters");
   }
 
+  //inputsValid = true;
+
   if (inputsValid) {
     //inputs are valid, continue
     createDonation();
@@ -117,8 +119,7 @@ function checkingError() {
 }
 /////////////////////////////////////////////////////////////
 
-function createDonation(e) {
-  e.preventDefault();
+function createDonation() {
   console.log("RUUN");
 
   const step1Data = JSON.parse(sessionStorage.getItem("step1Data"));
