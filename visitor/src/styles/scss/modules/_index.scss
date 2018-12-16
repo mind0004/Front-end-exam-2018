@@ -87,13 +87,25 @@
         }
       }
     }
-    img {
+    .image {
       position: absolute;
       bottom: -10vh;
       right: 0px;
       height: 45vh;
-      width: auto;
+      width: 100vw;
+      max-width: 100%;
       z-index: -1;
+      > div {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        right: 0px;
+        height: 45vh;
+        width: auto;
+      }
     }
   }
 
@@ -527,36 +539,44 @@
     }
 
     #intro {
-      width: 90vw;
-      max-width: 90vw;
-      margin: 50px auto 0px auto;
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-auto-rows: minmax(
-        min-content,
-        max-content
-      ); /* fit to each div size */
-      grid-gap: 10px;
-      > div {
-        min-height: 280px;
+      .container {
+        width: 90vw;
         max-width: 90vw;
-      }
-      .image {
-        margin-bottom: 65px;
-      }
-      .text {
-        display: block;
-      }
-      .bottle {
-        grid-row: 4 / 5;
-      }
-      .microscope {
-        grid-row: 8 / 9;
-        margin-bottom: 0px;
-      }
-      img {
-        height: 170px;
+        margin: 50px auto 0px auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(
+          min-content,
+          max-content
+        ); /* fit to each div size */
+        grid-gap: 10px;
+        > div {
+          min-height: 280px;
+          max-width: 90vw;
+        }
+        .image {
+          margin-bottom: 65px;
+        }
+        .text {
+          display: block;
+        }
+        .bottle {
+          grid-row: 4 / 5;
+        }
+        .microscope {
+          grid-row: 8 / 9;
+          margin-bottom: 0px;
+        }
+        img {
+          height: 170px;
+        }
+        .chartjs-size-monitor {
+          max-width: 70vw;
+        }
+        .research-state {
+          display: flex;
+        }
       }
     }
     #donate {
@@ -601,6 +621,32 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
   #index {
+    #hero {
+      .container {
+        padding-top: 5vh;
+      }
+    }
     // write everything that applies to the index page inside here
+    #intro {
+      .container {
+        .chartjs-size-monitor {
+          max-width: 10vw;
+          #myChart {
+            max-width: 40vw;
+          }
+        }
+      }
+    }
+    footer {
+      .container {
+        .copyright {
+          bottom: 25px;
+        }
+        .login {
+          bottom: 9px;
+          color: #838383;
+        }
+      }
+    }
   }
 }

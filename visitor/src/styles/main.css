@@ -400,13 +400,23 @@ a {
         transform: rotate(55deg);
         left: -6.5px;
         bottom: 9px; }
-  #index #hero img {
+  #index #hero .image {
     position: absolute;
     bottom: -10vh;
     right: 0px;
     height: 45vh;
-    width: auto;
+    width: 100vw;
+    max-width: 100%;
     z-index: -1; }
+    #index #hero .image > div {
+      position: relative;
+      height: 100%;
+      width: 100%; }
+    #index #hero .image img {
+      position: absolute;
+      right: 0px;
+      height: 45vh;
+      width: auto; }
 
 #index #intro {
   width: 100vw;
@@ -726,7 +736,7 @@ a {
     font-size: 20px; }
   #index #hero img {
     right: -100px; }
-  #index #intro {
+  #index #intro .container {
     width: 90vw;
     max-width: 90vw;
     margin: 50px auto 0px auto;
@@ -736,20 +746,24 @@ a {
     grid-auto-rows: minmax(min-content, max-content);
     /* fit to each div size */
     grid-gap: 10px; }
-    #index #intro > div {
+    #index #intro .container > div {
       min-height: 280px;
       max-width: 90vw; }
-    #index #intro .image {
+    #index #intro .container .image {
       margin-bottom: 65px; }
-    #index #intro .text {
+    #index #intro .container .text {
       display: block; }
-    #index #intro .bottle {
+    #index #intro .container .bottle {
       grid-row: 4 / 5; }
-    #index #intro .microscope {
+    #index #intro .container .microscope {
       grid-row: 8 / 9;
       margin-bottom: 0px; }
-    #index #intro img {
+    #index #intro .container img {
       height: 170px; }
+    #index #intro .container .chartjs-size-monitor {
+      max-width: 70vw; }
+    #index #intro .container .research-state {
+      display: flex; }
   #index #donate {
     width: 90vw;
     margin: 0 auto;
@@ -778,6 +792,19 @@ a {
         grid-row: 1 / 2; }
     #index footer .login {
       bottom: 40px; } }
+
+@media (max-width: 575px) {
+  #index #hero .container {
+    padding-top: 5vh; }
+  #index #intro .container .chartjs-size-monitor {
+    max-width: 10vw; }
+    #index #intro .container .chartjs-size-monitor #myChart {
+      max-width: 40vw; }
+  #index footer .container .copyright {
+    bottom: 25px; }
+  #index footer .container .login {
+    bottom: 9px;
+    color: #838383; } }
 
 #step-1 {
   width: 100vw;
