@@ -336,11 +336,12 @@ a {
     max-width: 1200px;
     height: 70px;
     margin: 0 auto; }
-    #index header .container h2 {
+    #index header .container img {
       float: left;
-      font-size: 40px;
-      line-height: 100px;
-      margin-left: 20px; }
+      max-width: 20%;
+      /* font-size: 40px;
+        line-height: 100px; */
+      margin: 30px 20px 20px 20px; }
     #index header .container .a-button {
       float: right;
       margin: 35px 20px 0px 0px; }
