@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
+//Display the summary with this week, this month, in total and overview of last months
 class Summary extends Component {
   render() {
     console.log(this.props.overview);

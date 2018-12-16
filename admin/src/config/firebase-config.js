@@ -1,3 +1,5 @@
+//Config file of firebase used to connect firebase with our app
+
 //Import Firebase-core, firestore and auth
 import firebase from "firebase/app"; //only import core firebase
 import "firebase/firestore";

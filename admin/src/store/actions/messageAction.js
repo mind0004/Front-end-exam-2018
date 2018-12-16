@@ -1,3 +1,4 @@
+//Action to search by exact name
 export const searchByName = term => {
   return (dispatch, getState, { getFirestore }) => {
     // make async call to database

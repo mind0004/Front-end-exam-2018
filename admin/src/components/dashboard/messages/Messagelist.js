@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
 
+//Component to display a list of multiple Message components
 class MessageList extends Component {
   handleSearchChange = e => {
     this.props.searchByName(e.target.value);

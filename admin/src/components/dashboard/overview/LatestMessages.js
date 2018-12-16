@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+//Display the latest three messages
 class LatestMessages extends Component {
   render() {
     const latestThreeMessages = this.props.messages ? (

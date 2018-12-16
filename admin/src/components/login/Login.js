@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { signIn } from "../../store/actions/authAction";
 import { compose } from "redux";
 
+//login component which is loaded as the very first
 class Login extends Component {
   state = {
     email: null,

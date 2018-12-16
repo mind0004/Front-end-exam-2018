@@ -26,6 +26,7 @@ export const signIn = credentials => {
   };
 };
 
+//Signout all users
 export const signOut = () => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();

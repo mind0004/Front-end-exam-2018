@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Messagelist from "./messages/Messagelist";
 
+//Show all messages
 class Messages extends Component {
   render() {
     return (

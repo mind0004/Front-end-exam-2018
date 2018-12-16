@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+//Message component to display a single message
 class Message extends Component {
   render() {
     return (

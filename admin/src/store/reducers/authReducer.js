@@ -3,6 +3,7 @@ const initState = {
   authError: null
 };
 
+//Update Redux with a field authError if login failed or succedded
 const authReducer = (state = initState, action) => {
   switch (action.type) {
     case "LOGIN_ERROR":

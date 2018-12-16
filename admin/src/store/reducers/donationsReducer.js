@@ -2,6 +2,7 @@ const initState = {
   searchByName: []
 };
 
+//Update donations inside Redux with matching search results
 const donationsReducer = (state = initState, action) => {
   switch (action.type) {
     case "SEARCH_NAME_SUCCESS":
