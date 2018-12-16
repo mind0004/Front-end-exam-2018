@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+//Display the 10 top donors
 class TopDonors extends Component {
   render() {
     return (

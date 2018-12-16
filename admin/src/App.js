@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./components/login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 
+//Main Component holding all components
 class App extends Component {
   render() {
     return (

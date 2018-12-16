@@ -4,6 +4,7 @@ import UserPicture from "../../assets/img/user-picture.png";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authAction";
 
+//Left navbar of the dashboard to navigate around
 class Navbar extends Component {
   state = {
     showMobileMenu: false

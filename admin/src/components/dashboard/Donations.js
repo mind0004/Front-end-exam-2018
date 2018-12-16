@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DonatorList from "./donations/DonatorList";
 
+//Show all donations
 class Donations extends Component {
   render() {
     return (

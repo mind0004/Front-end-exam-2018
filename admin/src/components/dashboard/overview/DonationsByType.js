@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 
+//Display donations by type (month, one time or yearly)
 class DonationsByType extends Component {
   render() {
     const chartData = {

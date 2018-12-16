@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
 
+//Default first page of dashboard showing the most interesting data
 class Overview extends Component {
   render() {
     console.log(this.props.overview);

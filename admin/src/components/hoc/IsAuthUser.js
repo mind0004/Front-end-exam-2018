@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
+//Disable component for users who are not logged in, redirect to login component
 // Take Component to wrap around as parameter
 const IsAuthUser = WrappedComponent => {
   /* 

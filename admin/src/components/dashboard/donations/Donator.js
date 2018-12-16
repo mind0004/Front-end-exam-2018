@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+//Donator component to display each donator
 class Donator extends Component {
   render() {
     return (

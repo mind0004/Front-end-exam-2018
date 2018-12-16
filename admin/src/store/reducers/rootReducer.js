@@ -7,6 +7,7 @@ import { combineReducers } from "redux";
 import { firestoreReducer } from "redux-firestore";
 import { firebaseReducer } from "react-redux-firebase";
 
+//rootReducer used to combine all reducers and assign their state keys
 const rootReducer = combineReducers({
   auth: authReducer,
   overview: overviewReducer,

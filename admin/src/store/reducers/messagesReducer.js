@@ -2,6 +2,7 @@ const initState = {
   searchByName: []
 };
 
+//Update messages inside Redux with matching search results
 const messagesReducer = (state = initState, action) => {
   switch (action.type) {
     case "SEARCH_NAME_SUCCESS":
