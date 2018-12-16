@@ -4,15 +4,15 @@ class LatestMessages extends Component {
   render() {
     const latestThreeMessages = this.props.messages ? (
       this.props.messages.map((message, i) => {
-        if (i < 3) {
-          return (
-            <tr key={message.id}>
-              <th>{message.date}</th>
-              <th>{message.name}</th>
-              <th>{message.institute}</th>
-            </tr>
-          );
-        }
+        return i < 3 ? (
+          <tr key={message.id}>
+            <th>{message.date}</th>
+            <th>{message.name}</th>
+            <th>{message.institute}</th>
+          </tr>
+        ) : (
+          <p>No messages available</p>
+        );
       })
     ) : (
       <p>Loading</p>

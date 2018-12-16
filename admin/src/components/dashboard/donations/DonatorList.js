@@ -7,7 +7,6 @@ import { firestoreConnect } from "react-redux-firebase";
 
 class DonatorList extends Component {
   handleSearchChange = e => {
-    console.log("Props: ", this.props.donationsSearch);
     this.props.searchByName(e.target.value);
   };
 
@@ -16,8 +15,6 @@ class DonatorList extends Component {
     const searchDataExists = !this.props.donationsSearch
       ? false
       : this.props.donationsSearch.searchByName.length > 0;
-
-    console.log("SEAAARCH: ", this.donationsSearch);
 
     const displayDonations = searchDataExists ? (
       this.props.donationsSearch.searchByName.map(donation => {
@@ -43,7 +40,7 @@ class DonatorList extends Component {
                   <div className="input-field">
                     <input
                       type="text"
-                      name="text"
+                      name="search"
                       placeholder=" "
                       onChange={this.handleSearchChange}
                     />
@@ -92,7 +89,6 @@ class DonatorList extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
   return {
     donations: state.firestore.ordered.donations,
     donationsSearch: state.donations
