@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
+import MediaQuery from "react-responsive";
 
 //Display the summary with this week, this month, in total and overview of last months
 class Summary extends Component {
@@ -95,12 +96,32 @@ class Summary extends Component {
           </div>
           <div className="month-graph">
             <h4>Donated by month</h4>
-            <Line
-              data={chartData}
-              options={chartOptions}
-              width={1600}
-              height={600}
-            />
+
+            <MediaQuery minDeviceWidth={600}>
+              {matches => {
+                if (matches) {
+                  //media query matches
+                  return (
+                    <Line
+                      data={chartData}
+                      options={chartOptions}
+                      width={1600}
+                      height={600}
+                    />
+                  );
+                } else {
+                  //media query doesnt match
+                  return (
+                    <Line
+                      data={chartData}
+                      options={chartOptions}
+                      width={600}
+                      height={600}
+                    />
+                  );
+                }
+              }}
+            </MediaQuery>
           </div>
         </div>
       </div>

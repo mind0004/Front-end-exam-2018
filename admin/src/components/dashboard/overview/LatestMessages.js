@@ -11,11 +11,7 @@ class LatestMessages extends Component {
             <th>{message.name}</th>
             <th>{message.institute}</th>
           </tr>
-        ) : (
-          <tr>
-            <th>No messages available</th>
-          </tr>
-        );
+        ) : null;
       })
     ) : (
       <tr>
