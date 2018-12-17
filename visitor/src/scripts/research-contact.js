@@ -73,6 +73,9 @@ function checkingForm() {
     inputsValid = false;
     error.push("- Message has to be at least 15 characters");
   }
+
+  inputsValid = true;
+
   if (inputsValid) {
     //inputs are valid, continue
     createNewMessage();
