@@ -12,13 +12,9 @@ class LatestMessages extends Component {
             <th>{message.institute}</th>
           </tr>
         ) : (
-<<<<<<< HEAD
-          <p />
-=======
           <tr>
             <th>No messages available</th>
           </tr>
->>>>>>> lars
         );
       })
     ) : (
