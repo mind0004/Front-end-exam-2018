@@ -16,6 +16,7 @@ const db = firebase.firestore();
 db.settings({
   timestampsInSnapshots: true
 });
+
 //////////////////////////////////////////
 
 const nameInput = document.querySelector("#step-2 input[name='name']");
