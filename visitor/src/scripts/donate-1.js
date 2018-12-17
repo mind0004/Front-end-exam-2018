@@ -1,3 +1,38 @@
+// FIREBASE
+var config = {
+  apiKey: "AIzaSyBrTXlPTks8CPKRbZBSDnTXpPaotL4Wpwg",
+  authDomain: "polyeco-eda86.firebaseapp.com",
+  databaseURL: "https://polyeco-eda86.firebaseio.com",
+  projectId: "polyeco-eda86",
+  storageBucket: "polyeco-eda86.appspot.com",
+  messagingSenderId: "86781747630"
+};
+firebase.initializeApp(config);
+
+// Initialize Cloud Firestore through Firebase
+const db = firebase.firestore();
+
+// Disable deprecated features
+db.settings({
+  timestampsInSnapshots: true
+});
+
+//Get overview of latets three donations and top three donators
+function getOverview() {
+  db.collection("overview_visitor")
+    .get()
+    .then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        // doc.data() is never undefined for query doc snapshots
+        console.log("Your document data is: ", doc.data());
+      });
+    })
+    .catch(function(error) {
+      console.log("Error getting documents: ", error);
+    });
+}
+getOverview();
+
 //Mini
 
 /* ==========================================================================

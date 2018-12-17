@@ -103,11 +103,10 @@ function checkingError() {
 
 function createNewMessage() {
   const timestamp = +new Date();
+  const dateToday = moment().format("DD/MM/YYYY");
   db.collection("messages")
     .add({
-      date: moment()
-        .subtract(10, "days")
-        .calendar(),
+      date: dateToday,
       institute: instituteInput.value,
       name: nameInput.value,
       email: emailInput.value,

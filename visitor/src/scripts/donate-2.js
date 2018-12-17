@@ -16,6 +16,7 @@ const db = firebase.firestore();
 db.settings({
   timestampsInSnapshots: true
 });
+
 //////////////////////////////////////////
 
 const nameInput = document.querySelector("#step-2 input[name='name']");
@@ -126,11 +127,10 @@ function createDonation() {
   const checkBox = document.querySelector("#step-2 #subcheckbox");
   const name = checkBox.checked ? "Anonymous" : nameInput.value;
   const timestamp = +new Date();
+  const dateToday = moment().format("DD/MM/YYYY");
   db.collection("donations")
     .add({
-      date: moment()
-        .subtract(10, "days")
-        .calendar(),
+      date: dateToday,
       name: name,
       email: emailInput.value,
       amount: step1Data.amount,
