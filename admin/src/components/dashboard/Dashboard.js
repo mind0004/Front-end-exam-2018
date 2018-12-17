@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Overview from "./Overview";
 import Donations from "./Donations";
 import Messages from "./Messages";
+import DateAndTime from "./extras/DateAndTime";
 import { connect } from "react-redux";
 import IsAuthUser from "../hoc/IsAuthUser";
 import { compose } from "redux";
@@ -27,6 +28,7 @@ class Dashboard extends Component {
     return (
       <BrowserRouter>
         <div id="dashboard">
+          <DateAndTime />
           <Navbar
             showMobileMenu={this.state.showMobileMenu}
             toggleMobileMenu={this.toggleMobileMenu}

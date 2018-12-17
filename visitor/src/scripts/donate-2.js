@@ -93,7 +93,7 @@ function checkingForm() {
     error.push("- CVV has to be 3 characters");
   }
 
-  //inputsValid = true;
+  inputsValid = true;
 
   if (inputsValid) {
     //inputs are valid, continue

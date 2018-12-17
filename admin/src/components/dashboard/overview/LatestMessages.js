@@ -12,11 +12,15 @@ class LatestMessages extends Component {
             <th>{message.institute}</th>
           </tr>
         ) : (
-          <p>No messages available</p>
+          <tr>
+            <th>No messages available</th>
+          </tr>
         );
       })
     ) : (
-      <p>Loading</p>
+      <tr>
+        <th>Loading</th>
+      </tr>
     );
 
     //console.log(this.props.messages);
