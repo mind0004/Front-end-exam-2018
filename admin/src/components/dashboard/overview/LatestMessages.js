@@ -7,9 +7,9 @@ class LatestMessages extends Component {
       this.props.messages.map((message, i) => {
         return i < 3 ? (
           <tr key={message.id}>
-            <th>{message.date}</th>
-            <th>{message.name}</th>
-            <th>{message.institute}</th>
+            <td>{message.date}</td>
+            <td>{message.name}</td>
+            <td>{message.institute}</td>
           </tr>
         ) : null;
       })

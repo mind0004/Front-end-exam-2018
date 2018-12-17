@@ -10,52 +10,52 @@ class TopDonors extends Component {
           <table>
             <tbody>
               <tr>
-                <th>
+                <td>
                   {this.props.overview.topDonors[0].amount +
                     this.props.overview.currency}
-                </th>
-                <th>{this.props.overview.topDonors[0].name}</th>
+                </td>
+                <td>{this.props.overview.topDonors[0].name}</td>
               </tr>
 
               <tr>
-                <th>
+                <td>
                   {this.props.overview.topDonors[1].amount +
                     this.props.overview.currency}
-                </th>
-                <th>{this.props.overview.topDonors[1].name}</th>
+                </td>
+                <td>{this.props.overview.topDonors[1].name}</td>
               </tr>
 
               <tr>
-                <th>
+                <td>
                   {this.props.overview.topDonors[2].amount +
                     this.props.overview.currency}
-                </th>
-                <th>{this.props.overview.topDonors[2].name}</th>
+                </td>
+                <td>{this.props.overview.topDonors[2].name}</td>
               </tr>
 
-              <tr>
-                <th>
+              {/* <tr>
+                <td>
                   {this.props.overview.topDonors[3].amount +
                     this.props.overview.currency}
-                </th>
-                <th>{this.props.overview.topDonors[3].name}</th>
+                </td>
+                <td>{this.props.overview.topDonors[3].name}</td>
               </tr>
 
               <tr>
-                <th>
+                <td>
                   {this.props.overview.topDonors[4].amount +
                     this.props.overview.currency}
-                </th>
-                <th>{this.props.overview.topDonors[4].name}</th>
-              </tr>
+                </td>
+                <td>{this.props.overview.topDonors[4].name}</td>
+              </tr> */}
 
-              <tr>
-                <th>
+              {/* <tr>
+                <td>
                   {this.props.overview.topDonors[5].amount +
                     this.props.overview.currency}
-                </th>
-                <th>{this.props.overview.topDonors[5].name}</th>
-              </tr>
+                </td>
+                <td>{this.props.overview.topDonors[5].name}</td>
+              </tr> */}
             </tbody>
           </table>
         </div>

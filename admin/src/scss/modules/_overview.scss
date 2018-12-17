@@ -72,10 +72,12 @@
         margin-left: auto;
         margin-right: auto;
 
-        tr {
-          padding: 50px;
+        td {
+          padding: 0px;
+          width: 100px;
           height: 50px;
-          text-align: center;
+          vertical-align: middle;
+          text-align: middle;
         }
       }
     }
@@ -89,10 +91,12 @@
         margin-left: auto;
         margin-right: auto;
 
-        tr {
-          padding: 50px;
+        td {
+          padding: 0px;
+          width: 100px;
           height: 50px;
-          text-align: center;
+          vertical-align: middle;
+          text-align: middle;
         }
       }
     }
