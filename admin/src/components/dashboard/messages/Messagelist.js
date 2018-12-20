@@ -15,7 +15,9 @@ class MessageList extends Component {
     //Check if search results are available
     const searchDataExists = !this.props.messagesSearch
       ? false
-      : this.props.messagesSearch.searchByName.length > 0;
+      : this.props.messagesSearch.searchByName
+      ? this.props.messagesSearch.searchByName.length > 0
+      : false;
 
     //Display search results or all messages or loading
     const displayMessages = searchDataExists ? (

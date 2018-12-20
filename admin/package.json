@@ -26,6 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://stud.advena.me/sem3-2018/exam/admin/",
   "eslintConfig": {
     "extends": "react-app"
   },

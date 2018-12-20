@@ -12,10 +12,12 @@ class DonatorList extends Component {
   };
 
   render() {
-    //console.log(this.props.donations);
+    console.log(this.props.donationsSearch);
     const searchDataExists = !this.props.donationsSearch
-      ? false
-      : this.props.donationsSearch.searchByName.length > 0;
+      ? true
+      : this.props.donationsSearch.searchByName
+      ? this.props.donationsSearch.searchByName.length > 0
+      : false;
 
     const displayDonations = searchDataExists ? (
       this.props.donationsSearch.searchByName.map(donation => {

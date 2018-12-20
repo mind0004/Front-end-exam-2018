@@ -17,6 +17,12 @@ const messagesReducer = (state = initState, action) => {
         ...state,
         searchByName: action.err
       };
+    case "SEARCH_NAME_UNAVAILABLE":
+      console.log("Search unavailable", action);
+      return {
+        ...state,
+        searchByName: undefined
+      };
     default:
       return state;
   }

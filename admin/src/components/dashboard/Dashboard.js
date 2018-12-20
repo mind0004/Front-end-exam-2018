@@ -8,6 +8,7 @@ import DateAndTime from "./extras/DateAndTime";
 import { connect } from "react-redux";
 import IsAuthUser from "../hoc/IsAuthUser";
 import { compose } from "redux";
+import config from "../../config/config.json";
 
 //Dashboard is the Top level component enclosing all pages and components inside the admin dashboard
 class Dashboard extends Component {
@@ -25,8 +26,9 @@ class Dashboard extends Component {
     });
   };
   render() {
+    console.log(this.props.location);
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={config.path}>
         <div id="dashboard">
           <DateAndTime />
           <Navbar

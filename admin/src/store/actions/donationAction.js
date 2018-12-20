@@ -5,20 +5,24 @@ export const searchByName = term => {
     const firestore = getFirestore();
 
     let searchNameResults = [];
-
-    firestore
-      .collection("donations")
-      .where("name", "==", term)
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          searchNameResults.push(doc.data());
+    if (term.length > 0) {
+      firestore
+        .collection("donations")
+        .where("name", "==", term)
+        .get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(doc => {
+            console.log(doc.data());
+            searchNameResults.push(doc.data());
+          });
+          dispatch({ type: "SEARCH_NAME_SUCCESS", searchNameResults });
+        })
+        .catch(err => {
+          dispatch({ type: "SEARCH_NAME_ERROR" }, err);
         });
-        dispatch({ type: "SEARCH_NAME_SUCCESS", searchNameResults });
-      })
-      .catch(err => {
-        dispatch({ type: "SEARCH_NAME_ERROR" }, err);
-      });
+    } else {
+      //search name term too short
+      dispatch({ type: "SEARCH_NAME_UNAIVALABLE", searchNameResults });
+    }
   };
 };

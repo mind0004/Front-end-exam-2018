@@ -1,14 +1,14 @@
 {
-  "name": "webdev-default-structure",
+  "name": "polyeco-visitor-exams-project",
   "version": "1.0.0",
-  "description": "Use this default setup structure for web development",
+  "description": "Exam project",
   "scripts": {
     "dev-sass": "node-sass src/styles/scss/primary.scss src/styles/main.css -w",
     "dev-server": "live-server --open=src --browser=Chrome --wait=300",
     "dev": "npm run dev-sass | npm run dev-server",
     "=============================": "====================================",
     "build-sass": "node-sass src/styles/scss/primary.scss src/styles/main.css",
-    "build-parcel": "parcel build src/index.html --public-url .",
+    "build-parcel": "parcel build src/index.html --public-url ./",
     "build": "npm run dist-clear && npm run build-sass && npm run build-parcel && npm run build-static-path",
     "build-server": "cd dist && live-server --no-browser",
     "dist-clear": "rm -r -f dist/*",

@@ -10,9 +10,6 @@ import { firestoreConnect } from "react-redux-firebase";
 //Default first page of dashboard showing the most interesting data
 class Overview extends Component {
   render() {
-    console.log(this.props.overview);
-    console.log(this.props.messages);
-
     const allOverview =
       this.props.overview && this.props.messages ? (
         <div className="container">
