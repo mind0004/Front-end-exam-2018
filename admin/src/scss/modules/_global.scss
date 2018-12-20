@@ -10,6 +10,13 @@
   padding: 8px 23px;
   font-size: 20px;
   border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.a-button:hover {
+  background: #0393b7;
+  box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 //Box background for checkout etc.
@@ -150,6 +157,13 @@
   font-size: 20px;
   border-radius: 25px;
   border: none;
+  transition: all 0.3s;
+}
+
+.submit-button:hover {
+  background: #0393b7;
+  box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 //"Table" list which uses a header for search field, filter,... .
