@@ -136,7 +136,7 @@
           margin-top: 0.4vh;
         }
       }
-      .recentdonors-grid {
+      #recentdonors-grid {
         margin-bottom: 3vw;
 
         display: grid;
@@ -152,7 +152,7 @@
         }
       }
 
-      .topdonors-grid {
+      #topdonors-grid {
         margin-bottom: 3vw;
 
         display: grid;
@@ -173,17 +173,6 @@
 
         #donatemoney {
           text-align: center;
-          .slidecontainer {
-            p {
-              font-size: 4.2em;
-              margin-bottom: 20px;
-            }
-
-            input {
-              width: 100%;
-              margin: 0;
-            }
-          }
 
           .a-button {
             margin: 0 auto;
@@ -202,6 +191,44 @@
 
   .slidecontainer {
     width: 100%;
+    position: relative;
+
+    input[name="rangeSlider"] {
+      width: 60%;
+      margin: 0;
+    }
+    .amount {
+      width: 390px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      position: relative;
+      input,
+      p {
+        display: inline-block;
+      }
+      input {
+        width: 200px;
+        font-size: 60px;
+        padding: 0px 0px 0px 5px;
+        border: none;
+        outline: none;
+        margin-bottom: 0px;
+        position: relative;
+        z-index: 11;
+        background: rgba(0, 0, 0, 0);
+        text-align: right;
+      }
+      p {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      .line {
+        height: 1px;
+        width: 50%;
+        background: rgb(214, 214, 214);
+        margin: 0 auto;
+      }
+    }
   }
 
   .slider {
@@ -244,6 +271,8 @@
   .type {
     margin: 5vh 0vw;
     margin-top: 5vh;
+    display: inline-block;
+    margin: 5vh auto 0vh auto;
     input,
     p,
     .dropdown {
@@ -254,18 +283,20 @@
 
     .dropdown {
       position: relative;
-      height: 20px;
+      height: 25px;
       overflow: hidden;
       display: inline-block;
       cursor: pointer;
       transition: all 0.3s;
 
       ul {
+        padding-top: 2px;
         padding-right: 10px;
       }
       li {
-        padding: 2px 2px 5px 2px;
+        padding: 0px 2px 5px 2px;
         transition: all 0.3s;
+        font-size: 22px;
       }
       li:hover {
         background: lightblue;
@@ -273,15 +304,16 @@
 
       .line {
         position: absolute;
-        top: 19px;
+        top: 24px;
         height: 1px;
         width: 100%;
         background: black;
+        transition: 0.3s;
       }
       .arrow {
         position: absolute;
         right: 1px;
-        top: 2px;
+        top: 7px;
         border: solid black;
         border-width: 0 1px 1px 0;
         display: inline-block;
