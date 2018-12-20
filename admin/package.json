@@ -27,6 +27,7 @@
     "eject": "react-scripts eject"
   },
   "homepage": "https://mindaugasjukna.dk/kea/3-sem/exam/admin/",
+  "homepage-2": "https://stud.advena.me/sem3-2018/exam/admin/",
   "eslintConfig": {
     "extends": "react-app"
   },
