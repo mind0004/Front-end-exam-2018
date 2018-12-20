@@ -207,7 +207,7 @@
         display: inline-block;
       }
       input {
-        width: 200px;
+        width: 140px;
         font-size: 60px;
         padding: 0px 0px 0px 5px;
         border: none;
@@ -224,7 +224,7 @@
       }
       .line {
         height: 1px;
-        width: 50%;
+        width: 35%;
         background: rgb(214, 214, 214);
         margin: 0 auto;
       }
@@ -283,14 +283,14 @@
 
     .dropdown {
       position: relative;
-      height: 25px;
+      height: 26px;
       overflow: hidden;
       display: inline-block;
       cursor: pointer;
       transition: all 0.3s;
 
       ul {
-        padding-top: 2px;
+        padding-top: 0px;
         padding-right: 10px;
       }
       li {
@@ -304,7 +304,7 @@
 
       .line {
         position: absolute;
-        top: 24px;
+        top: 25px;
         height: 1px;
         width: 100%;
         background: black;
@@ -810,6 +810,12 @@
           font-size: 1.1em;
         }
       }
+    }
+    .slidecontainer .amount {
+      width: 290px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      position: relative;
     }
   }
 
