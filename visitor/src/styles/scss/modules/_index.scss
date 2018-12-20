@@ -324,6 +324,14 @@
       color: #454545;
       border-radius: 25px;
       border: 1px solid #707070;
+      transition: all 0.3s;
+    }
+    .submit-button:hover {
+      margin-top: 40px;
+      background: rgb(37, 37, 37);
+      color: #eeeeee;
+      border-radius: 25px;
+      border: 1px solid #707070;
     }
   }
 
