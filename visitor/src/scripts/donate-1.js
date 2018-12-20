@@ -51,6 +51,9 @@ function init() {
 /* ==========================================================================
       Functions
       ========================================================================== */
+
+// For slider to show input visually
+
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
@@ -66,7 +69,7 @@ const dropdown = document.querySelector("#step-1 .dropdown");
 let dropdownLIS;
 const dropdownUL = document.querySelector("#step-1 .dropdown ul");
 
-//Open/close period dropdown
+// Open/close period dropdown (monthly, yearly)
 dropdown.addEventListener("click", toggleDropdown);
 
 function toggleDropdown() {
@@ -112,6 +115,7 @@ function proceedToStep2() {
   const checkBox = document.querySelector("#step-1 #checkbox");
   const type = checkBox.checked ? currentPeriod : "one-time";
 
+  // A data object to be stored
   const step1Data = {
     amount: donationInput.value,
     type: type,
@@ -120,12 +124,3 @@ function proceedToStep2() {
 
   sessionStorage.setItem("step1Data", JSON.stringify(step1Data));
 }
-
-/*
-// Get saved data from sessionStorage
-var data = sessionStorage.getItem("key");
-
-// Remove saved data from sessionStorage
-sessionStorage.removeItem("key");
-
-*/

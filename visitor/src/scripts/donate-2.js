@@ -19,6 +19,8 @@ db.settings({
 
 //////////////////////////////////////////
 
+// Validator.js input validation
+
 const nameInput = document.querySelector("#step-2 input[name='name']");
 const emailInput = document.querySelector("#step-2 input[name='email']");
 const cardHolderNameInput = document.querySelector(
@@ -40,9 +42,9 @@ const errorMessage = document.querySelector("form .error-message");
 const checking = document.querySelector("form .checking");
 const submitContainer = document.querySelector("form .submit .container");
 
+// Look through the form when clicked, display any errors. If no errors were found, go to createDonation();
 paymentForm.addEventListener("submit", handleSubmitClick);
 
-/////////////////////////////////////////////////////////////
 function handleSubmitClick(e) {
   e.preventDefault();
   errorMessage.innerHTML = "";
@@ -60,36 +62,36 @@ function checkingForm() {
   let error = []; //Store all error massages inside here
 
   if (!validator.isByteLength(nameInput.value, { min: 3 })) {
-    //institute invalid
+    //invalid name
     inputsValid = false;
     error.push("- Name has to be at least 3 characters");
   }
   if (!validator.isEmail(emailInput.value)) {
-    //email invalid
+    //invalid invalid email
     inputsValid = false;
     error.push("- Invalid email");
   }
 
   if (!validator.isNumeric(cardHolderNameInput.value, { min: 16 })) {
-    //message invalid
+    //invalid card holder name
     inputsValid = false;
     error.push("- Card number has to be 16 characters");
   }
 
   if (!validator.isNumeric(cardMonthInput.value, { min: 2 })) {
-    //message invalid
+    //invalid card month
     inputsValid = false;
     error.push("- Please specify the month by two numeric characters");
   }
 
   if (!validator.isNumeric(cardYearInput.value, { min: 4 })) {
-    //message invalid
+    //invalid card year
     inputsValid = false;
     error.push("- Please specify the exact year of expiration");
   }
 
   if (!validator.isNumeric(cardCvvInput.value, { min: 3 })) {
-    //message invalid
+    //invalid card CVV
     inputsValid = false;
     error.push("- CVV has to be 3 characters");
   }
@@ -118,16 +120,24 @@ function checkingError() {
   submit.classList.remove("move-up");
   checking.classList.remove("active");
 }
+
 /////////////////////////////////////////////////////////////
 
+// No errors were found, this function fires off
 function createDonation() {
   console.log("RUUN");
 
+  // Session storage from step-1.html, amount of donation + donation type
   const step1Data = JSON.parse(sessionStorage.getItem("step1Data"));
+
   const checkBox = document.querySelector("#step-2 #subcheckbox");
   const name = checkBox.checked ? "Anonymous" : nameInput.value;
   const timestamp = +new Date();
+
+  // moment.js real time show
   const dateToday = moment().format("DD/MM/YYYY");
+
+  // Add information to firebase
   db.collection("donations")
     .add({
       date: dateToday,
