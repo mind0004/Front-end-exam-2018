@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sem3-2018/exam/admin/precache-manifest.015a4b1c4f6f3e83531982ee98d763f2.js"
+  "/kea/3-sem/exam/admin/precache-manifest.f32dcac23feb91065439477ce2c43101.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/sem3-2018/exam/admin/index.html", {
+workbox.routing.registerNavigationRoute("/kea/3-sem/exam/admin/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

@@ -4,3 +4,5 @@ admin/node_modules
 visitor/src/styles/main.css
 admin/package.json
 admin/src/config/config.json
+admin/bundle
+visitor/dist
