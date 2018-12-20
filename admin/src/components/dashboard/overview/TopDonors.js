@@ -32,30 +32,6 @@ class TopDonors extends Component {
                 </td>
                 <td>{this.props.overview.topDonors[2].name}</td>
               </tr>
-
-              {/* <tr>
-                <td>
-                  {this.props.overview.topDonors[3].amount +
-                    this.props.overview.currency}
-                </td>
-                <td>{this.props.overview.topDonors[3].name}</td>
-              </tr>
-
-              <tr>
-                <td>
-                  {this.props.overview.topDonors[4].amount +
-                    this.props.overview.currency}
-                </td>
-                <td>{this.props.overview.topDonors[4].name}</td>
-              </tr> */}
-
-              {/* <tr>
-                <td>
-                  {this.props.overview.topDonors[5].amount +
-                    this.props.overview.currency}
-                </td>
-                <td>{this.props.overview.topDonors[5].name}</td>
-              </tr> */}
             </tbody>
           </table>
         </div>

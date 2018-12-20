@@ -19,8 +19,14 @@ const currentYear = now.getFullYear();
 //######################################################
 //######################################################
 
+/************************************************************** */
+/************************************************************** */
+/********************* UPDATE OVERVIEW ************************ */
+/************************************************************** */
+/************************************************************** */
 //Update Overview
 const handleOverview = donation => {
+  handleOverviewVisitor(donation); //fire also overview_visitor
   const amount = Number(donation.amount);
 
   let thisMonth,
@@ -44,8 +50,7 @@ const handleOverview = donation => {
       });
   })
     .then(function(overview) {
-      console.log("v.15");
-      console.log("OLD OVERVIEW: ", overview);
+      //console.log("OLD OVERVIEW: ", overview);
       //resolve(overview);
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -92,7 +97,7 @@ const handleOverview = donation => {
       });
     })
     .then(function(overview) {
-      console.log("NEW OVERVIEW: ", overview);
+      //console.log("NEW OVERVIEW: ", overview);
 
       return admin
         .firestore()
@@ -175,26 +180,82 @@ const updateDonationsByType = (overview, donation) => {
   return donationsByType;
 };
 
+/************************************************************** */
+/************************************************************** */
+/************** UPDATE OVERVIEW_VISITOR *********************** */
+/************************************************************** */
+/************************************************************** */
+//Update Overview
+const handleOverviewVisitor = donation => {
+  const amount = Number(donation.amount);
+
+  let latest, topDonors;
+
+  return new Promise(function(resolve, reject) {
+    //Get overview
+    return admin
+      .firestore()
+      .collection("overview_visitor")
+      .doc("all")
+      .onSnapshot(doc => {
+        const overview_visitor = doc.data();
+        setTimeout(() => {
+          resolve(overview_visitor);
+        }, 1000);
+      });
+  })
+    .then(function(overview_visitor) {
+      console.log("OLD OVERVIEW: ", overview_visitor);
+      //resolve(overview);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(overview_visitor);
+        }, 1000);
+      });
+    })
+    .then(function(overview_visitor) {
+      //Calculate new overview
+
+      //latest
+      latest = overview_visitor.latestDonations.slice(0);
+      latest.unshift({ name: donation.name, amount: amount });
+      latest.pop();
+      overview_visitor.latestDonations = latest;
+
+      //topDonors
+      topDonors = updateTopDonors(overview_visitor, donation);
+      overview_visitor.topDonors = topDonors;
+
+      //Continue
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(overview_visitor);
+        }, 1000);
+      });
+    })
+    .then(function(overview_visitor) {
+      console.log("NEW OVERVIEW: ", overview_visitor);
+
+      return admin
+        .firestore()
+        .collection("overview_visitor")
+        .doc("all")
+        .update(overview_visitor)
+        .then(doc => console.log("Overview updated!"));
+    });
+};
+
+/************************************************************** */
+/************************************************************** */
+/************** MAIN FIREBASE FUNCTION ************************ */
+/************************************************************** */
+/************************************************************** */
 //Event listener when a new donation has been made
 exports.newDonation = functions.firestore
   .document("donations/{donationsId}")
   .onCreate(doc => {
+    console.log("v.18");
     const donation = doc.data();
     console.log("NEW DONATION: ", donation);
     return handleOverview(donation);
   });
-
-
-  let person = {
-    [b]: "Mindaugas",
-    age: 15,
-    sex: "Verryyy active boii",
-    b: "dsadasd",
-  }
-
- let b = "name";
-
- person[b]
- person.name
-
- person.b

@@ -8,8 +8,8 @@ const IsAuthUser = WrappedComponent => {
   /* 
       Create a stateful/stateless component inside the HOC
       and return either the WrappedComponent or
-      redirect to /signin.
-      If user is signed, disable access to /signin and /signup page
+      redirect to /.
+      If user is logged in, disable access to / 
   */
   const HOCComponent = props => {
     const { auth } = props;
