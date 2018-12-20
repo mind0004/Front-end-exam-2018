@@ -138,8 +138,6 @@ function proceedToStep2(e) {
 
   sessionStorage.setItem("step1Data", JSON.stringify(step1Data));
 }
-<<<<<<< HEAD
-=======
 let overview = {};
 const recentDonorsTemplate = document.querySelector("#recent-donors-template")
   .content;
@@ -187,4 +185,3 @@ function displayTopDonors() {
     topDonors.appendChild(clone);
   });
 }
->>>>>>> lars
