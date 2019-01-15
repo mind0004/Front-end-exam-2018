@@ -61,30 +61,42 @@ function checkingForm() {
   let inputsValid = true;
   let error = []; //Store all error massages inside here
 
+  /*
+    BUGFIX - Removed because wrong validator and when user is anyonymous, dont check for any length
   if (!validator.isByteLength(nameInput.value, { min: 3 })) {
     //invalid name
     inputsValid = false;
     error.push("- Name has to be at least 3 characters");
   }
+  */
   if (!validator.isEmail(emailInput.value)) {
     //invalid invalid email
     inputsValid = false;
     error.push("- Invalid email");
   }
 
-  if (!validator.isNumeric(cardHolderNameInput.value, { min: 16 })) {
+  if (
+    !validator.isNumeric(cardNumberInput.value) ||
+    cardNumberInput.value.length != 16
+  ) {
     //invalid card holder name
     inputsValid = false;
     error.push("- Card number has to be 16 characters");
   }
 
-  if (!validator.isNumeric(cardMonthInput.value, { min: 2 })) {
+  if (
+    !validator.isNumeric(cardMonthInput.value) ||
+    cardMonthInput.value.length < 2
+  ) {
     //invalid card month
     inputsValid = false;
     error.push("- Please specify the month by two numeric characters");
   }
 
-  if (!validator.isNumeric(cardYearInput.value, { min: 4 })) {
+  if (
+    !validator.isNumeric(cardYearInput.value) ||
+    cardYearInput.value.length < 2
+  ) {
     //invalid card year
     inputsValid = false;
     error.push("- Please specify the exact year of expiration");
